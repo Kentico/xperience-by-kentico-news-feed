@@ -1,9 +1,5 @@
 # Contributing Setup
 
----This documents the steps a maintainer or developer would follow to work on the library in their development environment---
-
----Update the details for this project, replacing "repotemplate" and anything else that needs changed---
-
 ## Required Software
 
 The requirements to setup, develop, and build this project are listed below.
@@ -53,7 +49,7 @@ To run the Sample app Admin customization in development mode, add the following
 
 ```json
 "CMSAdminClientModuleSettings": {
-  "kentico-xperience-integrations-repotemplate": {
+  "kentico-xperience-integrations-product-news-feed": {
     "Mode": "Proxy",
     "Port": 3009
   }
@@ -67,7 +63,7 @@ To run the Sample app Admin customization in development mode, add the following
    - `refactor/` - for restructuring of existing features
    - `fix/` - for bugfixes
 
-1. Run `dotnet format` against the `Kentico.Xperience.RepoTemplate` solution
+1. Run `dotnet format` against the `Kentico.Xperience.ProductNewsFeed` solution
 
    > use `dotnet: format` VS Code task.
 
