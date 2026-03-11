@@ -44,6 +44,13 @@ jobs:
         with:
           global-json-file: global.json
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: src/Kentico.Xperience.NewsFeed.Admin/Client/package.json
+          cache: npm
+          cache-dependency-path: src/Kentico.Xperience.NewsFeed.Admin/Client/package-lock.json
+
       - name: Install dependencies
         run: |
           dotnet restore `
