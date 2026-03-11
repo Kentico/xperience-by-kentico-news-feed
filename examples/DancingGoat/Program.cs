@@ -13,7 +13,6 @@ using Kentico.EmailBuilder.Web.Mvc;
 using Kentico.Membership;
 using Kentico.OnlineMarketing.Web.Mvc;
 using Kentico.PageBuilder.Web.Mvc;
-using Kentico.Xperience.NewsFeed;
 using Kentico.Xperience.Mjml;
 using Kentico.Web.Mvc;
 

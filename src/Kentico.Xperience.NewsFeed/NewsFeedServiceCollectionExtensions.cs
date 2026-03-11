@@ -1,11 +1,10 @@
 using Kentico.Xperience.NewsFeed.Services;
 
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace Kentico.Xperience.NewsFeed;
+namespace Microsoft.Extensions.DependencyInjection;
 
-public static class ServiceCollectionExtensions
+public static class NewsFeedServiceCollectionExtensions
 {
     public static IServiceCollection AddNewsFeed<TNewsFeedService>(
         this IServiceCollection services,
