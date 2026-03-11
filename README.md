@@ -45,59 +45,59 @@ Use these minimal steps to get the integration running. For a full walkthrough a
 
 1. Register News Feed services in your app startup.
 
-Use [examples/DancingGoat/Program.cs](examples/DancingGoat/Program.cs) as reference and add:
+   Use [examples/DancingGoat/Program.cs](examples/DancingGoat/Program.cs) as reference and add:
 
-```csharp
-using Kentico.Xperience.NewsFeed;
-using Kentico.Xperience.NewsFeed.Admin;
+   ```csharp
+   using Kentico.Xperience.NewsFeed;
+   using Kentico.Xperience.NewsFeed.Admin;
 
-builder.Services.AddNewsFeed<NewsFeedGraphqlService>(builder.Configuration);
-```
+   builder.Services.AddNewsFeed<NewsFeedGraphqlService>(builder.Configuration);
+   ```
 
 1. Configure the `Kentico:NewsFeed` section in your `appsettings.json`.
 
-Use [examples/DancingGoat/appsettings.json](examples/DancingGoat/appsettings.json) as reference:
+   Use [examples/DancingGoat/appsettings.json](examples/DancingGoat/appsettings.json) as reference:
 
-```json
-"Kentico": {
-  "NewsFeed": {
-    "EndpointUrl": "https://<your-headless-endpoint>/graphql/<channel-guid>",
-    "FeedItemId": "<headless-item-guid>",
-    "BearerToken": "<bearer-token>",
-    "CacheDurationMinutes": 5
-  }
-}
-```
+   ```json
+   "Kentico": {
+     "NewsFeed": {
+       "EndpointUrl": "https://<your-headless-endpoint>/graphql/<channel-guid>",
+       "FeedItemId": "<headless-item-guid>",
+       "BearerToken": "<bearer-token>",
+       "CacheDurationMinutes": 5
+     }
+   }
+   ```
 
 1. Register the admin page application attribute.
 
-Use [examples/DancingGoat/Program.cs](examples/DancingGoat/Program.cs) as reference:
+   Use [examples/DancingGoat/Program.cs](examples/DancingGoat/Program.cs) as reference:
 
-```csharp
-[assembly: UICategory(
-    "DancingGoat.Admin.NewsFeed.Category",
-    "Dancing Goat",
-    Icons.Cup,
-    100)]
-[assembly: UIApplication(
-    "Kentico.Xperience.NewsFeed.Admin.Application",
-    typeof(NewsFeedTemplatePage),
-    "<page-slug>",
-    "News Feed",
-    "DancingGoat.Admin.NewsFeed.Category",
-    Icons.Cup,
-    "@kentico/xperience-integrations-news-feed-web-admin/NewsFeed")]
-```
+   ```csharp
+   [assembly: UICategory(
+       "DancingGoat.Admin.NewsFeed.Category",
+       "Dancing Goat",
+       Icons.Cup,
+       100)]
+   [assembly: UIApplication(
+       "Kentico.Xperience.NewsFeed.Admin.Application",
+       typeof(NewsFeedTemplatePage),
+       "<page-slug>",
+       "News Feed",
+       "DancingGoat.Admin.NewsFeed.Category",
+       Icons.Cup,
+       "@kentico/xperience-integrations-news-feed-web-admin/NewsFeed")]
+   ```
 
-Registering these in your own application gives you full control over how they are presented.
+   Registering these in your own application gives you full control over how they are presented.
 
 1. Implement and register an `INewsFeedService`.
 
-A working example is available in [examples/DancingGoat/Services/NewsFeedGraphqlService.cs](examples/DancingGoat/Services/NewsFeedGraphqlService.cs).
+   A working example is available in [examples/DancingGoat/Services/NewsFeedGraphqlService.cs](examples/DancingGoat/Services/NewsFeedGraphqlService.cs).
 
 1. Run your application and open Xperience admin.
 
-Navigate to the registered "News Feed" application page and confirm feed items are loaded.
+   Navigate to the registered "News Feed" application page and confirm feed items are loaded.
 
 ## Full Instructions
 
