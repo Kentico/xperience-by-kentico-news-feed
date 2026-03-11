@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-using DancingGoat;
+﻿using DancingGoat;
 using DancingGoat.EmailComponents;
 using DancingGoat.Helpers.Generators;
 using DancingGoat.Models;
+using DancingGoat.Services;
 
-using CMS;
 using CMS.Base;
 
 using Kentico.Activities.Web.Mvc;
@@ -17,21 +13,28 @@ using Kentico.EmailBuilder.Web.Mvc;
 using Kentico.Membership;
 using Kentico.OnlineMarketing.Web.Mvc;
 using Kentico.PageBuilder.Web.Mvc;
+using Kentico.Xperience.ProductNewsFeed;
 using Kentico.Xperience.Mjml;
 using Kentico.Web.Mvc;
 
-
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 using Samples.DancingGoat;
+using Kentico.Xperience.Admin.Base;
+using Kentico.Xperience.ProductNewsFeed.Admin;
+
+[assembly: UICategory("DancingGoat.Admin.NewsFeed.Category", "Dancing Goat", Icons.Kentico, 100)]
+[assembly: UIApplication(
+    "Kentico.Xperience.ProductNewsFeed.Admin.Application",
+    typeof(ProductNewsFeedTemplatePage),
+    "product-news",
+    "Product News",
+    "DancingGoat.Admin.NewsFeed.Category",
+    Icons.Cup,
+    "@kentico/xperience-integrations-product-news-feed-web-admin/ProductNewsFeed")]
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,6 +73,7 @@ builder.Services.AddLocalization()
 
 builder.Services.AddDancingGoatServices();
 builder.Services.AddSingleton<IEmailActivityTrackingEvaluator, EmailActivityTrackingEvaluator>();
+builder.Services.AddProductNewsFeed<ProductNewsFeedGraphqlService>(builder.Configuration);
 
 ConfigureEmailBuilder(builder.Services);
 ConfigureMembershipServices(builder.Services);

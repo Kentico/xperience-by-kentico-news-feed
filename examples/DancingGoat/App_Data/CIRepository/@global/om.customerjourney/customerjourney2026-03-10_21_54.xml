@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<om.customerjourney>
+  <CustomerJourneyDisplayName>Customer journey 2026-03-10_21:54</CustomerJourneyDisplayName>
+  <CustomerJourneyGUID>01a3a070-98c4-4fce-aeb5-6a01b584a2f7</CustomerJourneyGUID>
+  <CustomerJourneyIsScheduledRecalculationEnabled>False</CustomerJourneyIsScheduledRecalculationEnabled>
+  <CustomerJourneyName>CustomerJourney2026-03-10_21_54</CustomerJourneyName>
+  <CustomerJourneyStageConditionContactHistoryClassID>
+    <CodeName>CJ.StageConditionContactHistory_CustomerJourney2026_03_10_21_54</CodeName>
+    <GUID>02ff6b07-f0e7-4da7-9dcc-ac9b400fd626</GUID>
+    <ObjectType>om.customerjourneyhistory</ObjectType>
+  </CustomerJourneyStageConditionContactHistoryClassID>
+  <CustomerJourneyStageContactHistoryClassID>
+    <CodeName>CJ.StageContactHistory_CustomerJourney2026_03_10_21_54</CodeName>
+    <GUID>de4701d9-a9de-4e57-8b87-545891931687</GUID>
+    <ObjectType>om.customerjourneyhistory</ObjectType>
+  </CustomerJourneyStageContactHistoryClassID>
+</om.customerjourney>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.contentitemcommondata>
+  <ContentItemCommonDataContentItemID>
+    <CodeName>MazzerSuperJollyDR-8u1kikco</CodeName>
+    <GUID>2e1e4ded-efcc-402f-808c-04c4d815f7b5</GUID>
+    <ObjectType>cms.contentitem</ObjectType>
+  </ContentItemCommonDataContentItemID>
+  <ContentItemCommonDataContentLanguageID>
+    <CodeName>en</CodeName>
+    <GUID>e4a8fb12-ebc2-45d0-930f-c9fba2780c85</GUID>
+    <ObjectType>cms.contentlanguage</ObjectType>
+  </ContentItemCommonDataContentLanguageID>
+  <ContentItemCommonDataFirstPublishedWhen>2026-03-11 03:41:30Z</ContentItemCommonDataFirstPublishedWhen>
+  <ContentItemCommonDataGUID>f377c105-b17d-4991-ab75-9fce230607af</ContentItemCommonDataGUID>
+  <ContentItemCommonDataIsLatest>True</ContentItemCommonDataIsLatest>
+  <ContentItemCommonDataLastPublishedWhen>2026-03-11 03:51:23Z</ContentItemCommonDataLastPublishedWhen>
+  <ContentItemCommonDataVersionStatus>2</ContentItemCommonDataVersionStatus>
+  <ContentItemReferences>
+    <cms.contentitemreference>
+      <ContentItemReferenceGroupGUID>0ed40e7e-b87b-491e-95c0-16089ccf35f1</ContentItemReferenceGroupGUID>
+      <ContentItemReferenceGUID>84de0db9-27d7-49b6-8bfc-9a175598eef7</ContentItemReferenceGUID>
+      <ContentItemReferenceSourceCommonDataID>
+        <GUID>f377c105-b17d-4991-ab75-9fce230607af</GUID>
+        <ObjectType>cms.contentitemcommondata</ObjectType>
+      </ContentItemReferenceSourceCommonDataID>
+      <ContentItemReferenceTargetItemID>
+        <CodeName>MazzerSuperJollyDR-3vnbvawz</CodeName>
+        <GUID>85c64f44-4546-4327-a20a-a7934061c1b3</GUID>
+        <ObjectType>cms.contentitem</ObjectType>
+      </ContentItemReferenceTargetItemID>
+    </cms.contentitemreference>
+  </ContentItemReferences>
+</cms.contentitemcommondata>

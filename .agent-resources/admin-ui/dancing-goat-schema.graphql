@@ -1,0 +1,437 @@
+"""
+The purpose of the `cost` directive is to define a `weight` for GraphQL types, fields, and arguments. Static analysis can use these weights when calculating the overall cost of a query or response.
+"""
+directive @cost(
+  """
+  The `weight` argument defines what value to add to the overall cost for every appearance, or possible appearance, of a type, field, argument, etc.
+  """
+  weight: String!
+) on SCALAR | OBJECT | FIELD_DEFINITION | ARGUMENT_DEFINITION | ENUM | INPUT_FIELD_DEFINITION
+
+type DancingGoatProductNewsFeedHeadlessItem {
+  _system: _System!
+  productNewsFeedHeadlessItemTitle: String
+  productNewsFeedHeadlessItemDescription: String
+  productNewsFeedHeadlessItemNewsItemContents(
+    """
+    pagination skip
+    """
+    skip: Int
+
+    """
+    pagination take
+    """
+    take: Int
+    sort: _DancingGoatNewsItemContentSorter
+    where: _DancingGoatNewsItemContentFilter
+  ): _DancingGoatNewsItemContentCollection!
+}
+
+type _DancingGoatProductNewsFeedHeadlessItemCollection {
+  items: [DancingGoatProductNewsFeedHeadlessItem!]!
+
+  """
+  Specified pagination skip.
+  """
+  skip: Int!
+
+  """
+  Specified pagination take.
+  """
+  take: Int!
+
+  """
+  The number of stored items regardless of the specified pagination.
+  """
+  totalCount: Int!
+}
+
+input _DancingGoatProductNewsFeedHeadlessItemSorter {
+  _system: _SystemFieldsSorter
+  productNewsFeedHeadlessItemTitle: _Sorter
+  productNewsFeedHeadlessItemDescription: _Sorter
+}
+
+input _DancingGoatProductNewsFeedHeadlessItemFilter {
+  _system: _SystemFieldsFilter
+  productNewsFeedHeadlessItemTitle: _TextFilter
+  productNewsFeedHeadlessItemDescription: _LongtextFilter
+}
+
+type DancingGoatNewsItemContent {
+  _system: _System!
+  newsItemContentTitle: String
+  newsItemContentDescriptionHTML: String
+  newsItemContentTags: [_Tag!]
+  newsItemContentPublishedDate: DateTime
+  newsItemContentCTALabel: String
+  newsItemContentCTALinkURL: String
+}
+
+type _DancingGoatNewsItemContentCollection {
+  items: [DancingGoatNewsItemContent!]!
+
+  """
+  Specified pagination skip.
+  """
+  skip: Int!
+
+  """
+  Specified pagination take.
+  """
+  take: Int!
+
+  """
+  The number of stored items regardless of the specified pagination.
+  """
+  totalCount: Int!
+}
+
+input _DancingGoatNewsItemContentSorter {
+  _system: _SystemFieldsSorter
+  newsItemContentTitle: _Sorter
+  newsItemContentDescriptionHTML: _Sorter
+  newsItemContentPublishedDate: _Sorter
+  newsItemContentCTALabel: _Sorter
+  newsItemContentCTALinkURL: _Sorter
+}
+
+input _DancingGoatNewsItemContentFilter {
+  _system: _SystemFieldsFilter
+  newsItemContentTitle: _TextFilter
+  newsItemContentDescriptionHTML: _RichtexthtmlFilter
+  newsItemContentTags: _TaxonomyFilter
+  newsItemContentPublishedDate: _DatetimeFilter
+  newsItemContentCTALabel: _TextFilter
+  newsItemContentCTALinkURL: _TextFilter
+}
+
+type Query {
+  dancingGoatProductNewsFeedHeadlessItem(
+    """
+    content item GUID
+    """
+    id: UUID
+
+    """
+    GUID of specific language variant of content item
+    """
+    languageVariantId: UUID
+
+    """
+    content language
+    """
+    languageName: String
+
+    """
+    fallback to allowed languages
+    """
+    useLanguageFallbacks: Boolean
+  ): DancingGoatProductNewsFeedHeadlessItem
+  dancingGoatProductNewsFeedHeadlessItemCollection(
+    """
+    pagination skip
+    """
+    skip: Int
+
+    """
+    pagination take
+    """
+    take: Int
+
+    """
+    content language
+    """
+    languageName: String
+
+    """
+    fallback to allowed languages
+    """
+    useLanguageFallbacks: Boolean
+    sort: _DancingGoatProductNewsFeedHeadlessItemSorter
+    where: _DancingGoatProductNewsFeedHeadlessItemFilter
+  ): _DancingGoatProductNewsFeedHeadlessItemCollection!
+}
+
+enum _Sorter {
+  ASC
+  DESC
+}
+
+interface _ISystem {
+  id: UUID!
+  languageVariantId: UUID!
+  contentType: String!
+  languageName: String!
+  firstPublished: DateTime
+  lastPublished: DateTime
+}
+
+type _System implements _ISystem {
+  id: UUID!
+  languageVariantId: UUID!
+  contentType: String!
+  languageName: String!
+  firstPublished: DateTime
+  lastPublished: DateTime
+}
+
+type _WebPageSystem implements _ISystem {
+  id: UUID!
+  languageVariantId: UUID!
+  contentType: String!
+  languageName: String!
+  firstPublished: DateTime
+  lastPublished: DateTime
+  url: String
+}
+
+input _SystemFieldsFilter {
+  id: _GuidFilter
+  languageVariantId: _GuidFilter
+  firstPublished: _DatetimeFilter
+  lastPublished: _DatetimeFilter
+}
+
+input _SystemFieldsSorter {
+  firstPublished: _Sorter
+  lastPublished: _Sorter
+}
+
+input _IntegerFilter {
+  eq: Int
+  neq: Int
+  gt: Int
+  gte: Int
+  lt: Int
+  lte: Int
+  in: [Int!]
+  nin: [Int!]
+}
+
+input _LongintegerFilter {
+  eq: Long
+  neq: Long
+  gt: Long
+  gte: Long
+  lt: Long
+  lte: Long
+}
+
+input _DoubleFilter {
+  gt: Float
+  lt: Float
+}
+
+input _DecimalFilter {
+  eq: Decimal
+  neq: Decimal
+  gt: Decimal
+  gte: Decimal
+  lt: Decimal
+  lte: Decimal
+}
+
+input _TextFilter {
+  eq: String
+  neq: String
+  in: [String!]
+  nin: [String!]
+  startsWith: String
+  nstartsWith: String
+  contains: String
+  ncontains: String
+}
+
+input _LongtextFilter {
+  eq: String
+  neq: String
+  in: [String!]
+  nin: [String!]
+  startsWith: String
+  nstartsWith: String
+  contains: String
+  ncontains: String
+}
+
+input _RichtexthtmlFilter {
+  eq: String
+  neq: String
+  in: [String!]
+  nin: [String!]
+  startsWith: String
+  nstartsWith: String
+  contains: String
+  ncontains: String
+}
+
+input _BooleanFilter {
+  eq: Boolean
+  neq: Boolean
+}
+
+input _DatetimeFilter {
+  eq: DateTime
+  neq: DateTime
+  gt: DateTime
+  gte: DateTime
+  lt: DateTime
+  lte: DateTime
+}
+
+input _DateFilter {
+  eq: Date
+  neq: Date
+  gt: Date
+  gte: Date
+  lt: Date
+  lte: Date
+}
+
+input _TimespanFilter {
+  eq: TimeSpan
+  neq: TimeSpan
+  gt: TimeSpan
+  gte: TimeSpan
+  lt: TimeSpan
+  lte: TimeSpan
+}
+
+input _GuidFilter {
+  eq: UUID
+  neq: UUID
+  in: [UUID!]
+  nin: [UUID!]
+}
+
+input _TaxonomyFilter {
+  containsAll: [String!]
+  containsAny: [String!]
+}
+
+"""
+The `DateTime` scalar represents an ISO-8601 compliant date time type.
+"""
+scalar DateTime @specifiedBy(url: "https://www.graphql-scalars.com/date-time")
+
+scalar UUID @specifiedBy(url: "https://tools.ietf.org/html/rfc4122")
+
+"""
+The `Long` scalar type represents non-fractional signed whole 64-bit numeric values. Long can represent values between -(2^63) and 2^63 - 1.
+"""
+scalar Long
+
+"""
+The `Decimal` scalar type represents a decimal floating-point number.
+"""
+scalar Decimal
+
+"""
+The `Date` scalar represents an ISO-8601 compliant date type.
+"""
+scalar Date
+
+"""
+The `TimeSpan` scalar represents an ISO-8601 compliant duration type.
+"""
+scalar TimeSpan
+
+"""
+Represents a ContentItemAsset.
+"""
+type _ContentItemAsset {
+  """
+  Name of the asset.
+  """
+  name: String
+
+  """
+  Path to the asset.
+  """
+  path: String
+
+  """
+  Size (in bytes) of the asset.
+  """
+  fileSize: Long!
+
+  """
+  MIME type of the asset.
+  """
+  fileType: String
+
+  """
+  Width of the asset in px.
+  """
+  width: Int
+
+  """
+  Height of the asset in px.
+  """
+  height: Int
+}
+
+"""
+Represents an asset file.
+"""
+type _Asset {
+  """
+  Name of the asset file.
+  """
+  fileName: String
+
+  """
+  Path to the asset.
+  """
+  path: String
+
+  """
+  Size (in bytes) of the asset file.
+  """
+  fileSize: Long!
+
+  """
+  MIME type of the asset file.
+  """
+  fileType: String
+
+  """
+  Width (in pixels) of the asset file.
+  """
+  width: Int!
+
+  """
+  Height (in pixels) of the asset file.
+  """
+  height: Int!
+}
+
+"""
+Represents a web page.
+"""
+type _WebPage {
+  """
+  URL path to the web page.
+  """
+  url: String
+}
+
+"""
+Represents a tag.
+"""
+type _Tag {
+  """
+  Tag code name.
+  """
+  name: String
+
+  """
+  Tag title.
+  """
+  title: String
+
+  """
+  Tag description.
+  """
+  description: String
+}

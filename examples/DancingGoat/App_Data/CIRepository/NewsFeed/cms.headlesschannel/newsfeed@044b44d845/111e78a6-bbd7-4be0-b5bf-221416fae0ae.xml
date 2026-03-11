@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.headlesschannel>
+  <HeadlessChannelChannelID>
+    <CodeName>NewsFeed</CodeName>
+    <GUID>b0442e0b-ca77-483a-93c7-1418e9fa4e3e</GUID>
+    <ObjectType>cms.channel</ObjectType>
+  </HeadlessChannelChannelID>
+  <HeadlessChannelGUID>111e78a6-bbd7-4be0-b5bf-221416fae0ae</HeadlessChannelGUID>
+  <HeadlessChannelPreviewURL />
+  <HeadlessChannelPrimaryContentLanguageID>
+    <CodeName>en</CodeName>
+    <GUID>e4a8fb12-ebc2-45d0-930f-c9fba2780c85</GUID>
+    <ObjectType>cms.contentlanguage</ObjectType>
+  </HeadlessChannelPrimaryContentLanguageID>
+</cms.headlesschannel>

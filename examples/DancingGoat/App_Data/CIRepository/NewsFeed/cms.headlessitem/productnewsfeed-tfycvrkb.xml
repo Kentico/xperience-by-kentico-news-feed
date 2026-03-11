@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.headlessitem>
+  <HeadlessItemContentItemID>
+    <CodeName>ProductNewsFeed-tfycvrkb</CodeName>
+    <GUID>88875f22-97a1-4dc6-9954-8273862fb9a2</GUID>
+    <ObjectType>cms.contentitem</ObjectType>
+  </HeadlessItemContentItemID>
+  <HeadlessItemGUID>a401bf54-af2d-4611-85e6-3e4b098018b9</HeadlessItemGUID>
+  <HeadlessItemHeadlessChannelID>
+    <GUID>111e78a6-bbd7-4be0-b5bf-221416fae0ae</GUID>
+    <ObjectType>cms.headlesschannel</ObjectType>
+    <Parent>
+      <CodeName>NewsFeed</CodeName>
+      <GUID>b0442e0b-ca77-483a-93c7-1418e9fa4e3e</GUID>
+      <ObjectType>cms.channel</ObjectType>
+    </Parent>
+  </HeadlessItemHeadlessChannelID>
+  <HeadlessItemName>ProductNewsFeed-tfycvrkb</HeadlessItemName>
+</cms.headlessitem>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.channel>
+  <ChannelDisplayName>News feed</ChannelDisplayName>
+  <ChannelGUID>b0442e0b-ca77-483a-93c7-1418e9fa4e3e</ChannelGUID>
+  <ChannelName>NewsFeed</ChannelName>
+  <ChannelSize>Micro</ChannelSize>
+  <ChannelType>Headless</ChannelType>
+</cms.channel>

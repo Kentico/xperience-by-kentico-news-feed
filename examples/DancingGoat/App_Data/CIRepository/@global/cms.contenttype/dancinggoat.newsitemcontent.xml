@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.contenttype>
+  <ClassContentTypeType>Reusable</ClassContentTypeType>
+  <ClassDisplayName>News item content</ClassDisplayName>
+  <ClassFormDefinition>
+    <form>
+      <field column="ContentItemDataID" columntype="integer" enabled="true" guid="6f17ee9c-95f3-43f9-a320-cbe7029496a7" isPK="true" />
+      <field column="ContentItemDataCommonDataID" columntype="integer" enabled="true" guid="bd192078-7c5f-4dc3-91df-639a5e5a41e1" refobjtype="cms.contentitemcommondata" reftype="Required" system="true" />
+      <field column="ContentItemDataGUID" columntype="guid" enabled="true" guid="69e612e3-60aa-4f10-bb3e-526ee4a5e819" isunique="true" system="true" />
+      <field column="NewsItemContentTitle" columnprecision="0" columnsize="200" columntype="text" enabled="true" guid="cfaf7e71-3d0d-47fc-9ff7-e7c60054224c" visible="true">
+        <properties>
+          <explanationtextashtml>False</explanationtextashtml>
+          <fieldcaption>Title</fieldcaption>
+          <fielddescriptionashtml>False</fielddescriptionashtml>
+          <includeintranslation>True</includeintranslation>
+        </properties>
+        <settings>
+          <controlname>Kentico.Administration.TextInput</controlname>
+        </settings>
+      </field>
+      <field column="NewsItemContentDescriptionHTML" columnprecision="0" columntype="richtexthtml" enabled="true" guid="0ed40e7e-b87b-491e-95c0-16089ccf35f1" visible="true">
+        <properties>
+          <explanationtextashtml>False</explanationtextashtml>
+          <fieldcaption>Description</fieldcaption>
+          <fielddescriptionashtml>False</fielddescriptionashtml>
+          <includeintranslation>True</includeintranslation>
+        </properties>
+        <settings>
+          <ConfigurationName>Kentico.Administration.StructuredContent</ConfigurationName>
+          <controlname>Kentico.Administration.RichTextEditor</controlname>
+        </settings>
+      </field>
+      <field allowempty="true" column="NewsItemContentTags" columnprecision="0" columntype="taxonomy" enabled="true" guid="ab59afc1-dcf2-42d4-b8c5-2979f087e46e" visible="true">
+        <properties>
+          <explanationtextashtml>False</explanationtextashtml>
+          <fieldcaption>Tags</fieldcaption>
+          <fielddescriptionashtml>False</fielddescriptionashtml>
+        </properties>
+        <settings>
+          <controlname>Kentico.Administration.TagSelector</controlname>
+          <TaxonomyGroup>
+            <![CDATA[["1477faae-3c0b-4d40-baf0-e0d1315b8238"]]]>
+          </TaxonomyGroup>
+        </settings>
+      </field>
+      <field column="NewsItemContentPublishedDate" columnprecision="3" columntype="datetime" enabled="true" guid="d56e8188-8df4-43c1-b161-c25236a769c6" visible="true">
+        <properties>
+          <explanationtextashtml>False</explanationtextashtml>
+          <fieldcaption>Published date</fieldcaption>
+          <fielddescriptionashtml>False</fielddescriptionashtml>
+        </properties>
+        <settings>
+          <controlname>Kentico.Administration.DateTimeInput</controlname>
+        </settings>
+      </field>
+      <field column="NewsItemContentCTALabel" columnprecision="0" columnsize="200" columntype="text" enabled="true" guid="ff2c43fd-c4e6-455a-8b32-8871e8affca9" visible="true">
+        <properties>
+          <explanationtextashtml>False</explanationtextashtml>
+          <fieldcaption>CTA label</fieldcaption>
+          <fielddescriptionashtml>False</fielddescriptionashtml>
+          <includeintranslation>True</includeintranslation>
+        </properties>
+        <settings>
+          <controlname>Kentico.Administration.TextInput</controlname>
+        </settings>
+      </field>
+      <field column="NewsItemContentCTALinkURL" columnprecision="0" columnsize="200" columntype="text" enabled="true" guid="361f8d2a-213b-405b-94d2-40c8019c9227" visible="true">
+        <properties>
+          <explanationtextashtml>False</explanationtextashtml>
+          <fieldcaption>Link URL</fieldcaption>
+          <fielddescriptionashtml>False</fielddescriptionashtml>
+          <includeintranslation>True</includeintranslation>
+        </properties>
+        <settings>
+          <controlname>Kentico.Administration.TextInput</controlname>
+        </settings>
+      </field>
+    </form>
+  </ClassFormDefinition>
+  <ClassGUID>2a9a88b1-c641-4c70-a550-fd2b4ac80863</ClassGUID>
+  <ClassHasUnmanagedDbSchema>False</ClassHasUnmanagedDbSchema>
+  <ClassIconClass>xp-newspaper</ClassIconClass>
+  <ClassName>DancingGoat.NewsItemContent</ClassName>
+  <ClassShortName>DancingGoatNewsItemContent</ClassShortName>
+  <ClassTableName>DancingGoat_NewsItemContent</ClassTableName>
+  <ClassType>Content</ClassType>
+  <ClassWebPageHasUrl>False</ClassWebPageHasUrl>
+</cms.contenttype>

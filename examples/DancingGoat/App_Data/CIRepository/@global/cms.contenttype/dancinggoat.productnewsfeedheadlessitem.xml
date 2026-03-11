@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.contenttype>
+  <ClassContentTypeType>Headless</ClassContentTypeType>
+  <ClassDisplayName>Product News Feed Headless Item</ClassDisplayName>
+  <ClassFormDefinition>
+    <form>
+      <field column="ContentItemDataID" columntype="integer" enabled="true" guid="e95970f0-ab99-41eb-9c96-94ed72e0dad3" isPK="true" />
+      <field column="ContentItemDataCommonDataID" columntype="integer" enabled="true" guid="1d31be9a-2b96-4bd6-b8bd-757bb222161d" refobjtype="cms.contentitemcommondata" reftype="Required" system="true" />
+      <field column="ContentItemDataGUID" columntype="guid" enabled="true" guid="c0a4a32f-c9a6-4056-b71e-a700dae2f74d" isunique="true" system="true" />
+      <field column="ProductNewsFeedHeadlessItemTitle" columnprecision="0" columnsize="200" columntype="text" enabled="true" guid="058fec11-c1fa-490c-b11a-37a5e965048d" visible="true">
+        <properties>
+          <explanationtextashtml>False</explanationtextashtml>
+          <fieldcaption>Title</fieldcaption>
+          <fielddescriptionashtml>False</fielddescriptionashtml>
+        </properties>
+        <settings>
+          <controlname>Kentico.Administration.TextInput</controlname>
+        </settings>
+      </field>
+      <field column="ProductNewsFeedHeadlessItemDescription" columnprecision="0" columntype="longtext" enabled="true" guid="d94bf3cc-f2d4-45a1-aca3-0d780761a1aa" visible="true">
+        <properties>
+          <explanationtextashtml>False</explanationtextashtml>
+          <fieldcaption>Description</fieldcaption>
+          <fielddescriptionashtml>False</fielddescriptionashtml>
+        </properties>
+        <settings>
+          <controlname>Kentico.Administration.TextArea</controlname>
+          <CopyButtonVisible>False</CopyButtonVisible>
+          <MaxRowsNumber>5</MaxRowsNumber>
+          <MinRowsNumber>3</MinRowsNumber>
+        </settings>
+      </field>
+      <field allowempty="true" column="ProductNewsFeedHeadlessItemNewsItemContents" columnprecision="0" columntype="contentitemreference" enabled="true" guid="1664c204-75ef-435f-8f02-a62def8387c3" visible="true">
+        <properties>
+          <explanationtextashtml>False</explanationtextashtml>
+          <fieldcaption>News items</fieldcaption>
+          <fielddescriptionashtml>False</fielddescriptionashtml>
+        </properties>
+        <settings>
+          <AllowedContentItemTypeIdentifiers>
+            <![CDATA[["2a9a88b1-c641-4c70-a550-fd2b4ac80863"]]]>
+          </AllowedContentItemTypeIdentifiers>
+          <controlname>Kentico.Administration.ContentItemSelector</controlname>
+          <SelectionType>contentTypes</SelectionType>
+        </settings>
+      </field>
+    </form>
+  </ClassFormDefinition>
+  <ClassGUID>ee90311e-dc14-4d8e-8dda-c6f61ccf72c9</ClassGUID>
+  <ClassHasUnmanagedDbSchema>False</ClassHasUnmanagedDbSchema>
+  <ClassIconClass>xp-newspaper</ClassIconClass>
+  <ClassName>DancingGoat.ProductNewsFeedHeadlessItem</ClassName>
+  <ClassShortName>DancingGoatProductNewsFeedHeadlessItem</ClassShortName>
+  <ClassTableName>DancingGoat_ProductNewsFeedHeadlessItem</ClassTableName>
+  <ClassType>Content</ClassType>
+  <ClassWebPageHasUrl>False</ClassWebPageHasUrl>
+</cms.contenttype>

@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap');
+
+@layer base {
+  :root {
+    /* Kentico brand: New Gray 10 background, New Gray 80 text */
+    --background: 20 13% 97%;
+    --foreground: 17 12% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 17 12% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 17 12% 23%;
+    /* Kentico Orange #f05a22 */
+    --primary: 16 87% 54%;
+    --primary-foreground: 0 0% 100%;
+    /* New Gray 10 */
+    --secondary: 20 13% 95%;
+    --secondary-foreground: 17 12% 23%;
+    --muted: 13 15% 92%;
+    --muted-foreground: 16 20% 50%;
+    --accent: 16 87% 54%;
+    --accent-foreground: 0 0% 100%;
+    /* Brand Alert #FF4547 */
+    --destructive: 0 100% 64%;
+    --destructive-foreground: 0 0% 100%;
+    /* New Gray 20 #E5DEDC */
+    --border: 13 15% 88%;
+    --input: 13 15% 88%;
+    --ring: 16 87% 54%;
+    --radius: 0.5rem;
+
+    /* Kentico Orange accent */
+    --pnf-accent: 16 87% 54%;
+    /* Darker orange for hover states */
+    --pnf-accent-strong: 16 87% 42%;
+    /* New Gray 20 #E5DEDC */
+    --pnf-border: 13 15% 88%;
+    /* Kentico Violet 10 #F7F1FF — subtle brand chip tint */
+    --pnf-chip: 266 100% 97%;
+    --pnf-surface: 20 13% 99%;
+    /* New Gray 10 #F5F3F2 */
+    --pnf-surface-subtle: 20 13% 96%;
+    /* Shadow based on New Gray 80 */
+    --pnf-shadow: 17 12% 23% / 0.12;
+    --pnf-shadow-soft: 17 12% 50% / 0.12;
+
+    --pnf-heading-font: 'Fraunces', Georgia, serif;
+    --pnf-body-font: 'Manrope', 'Segoe UI', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--pnf-body-font);
+  }
+
+  .pnf-stage {
+    background:
+      radial-gradient(circle at 10% 10%, hsl(var(--pnf-chip)) 0%, transparent 40%),
+      radial-gradient(circle at 90% 15%, hsl(16 87% 96%) 0%, transparent 38%),
+      linear-gradient(170deg, hsl(var(--background)) 0%, hsl(20 15% 96%) 100%);
+  }
+
+  .pnf-stagger-item {
+    animation: pnfRise 360ms ease both;
+  }
+
+  .pnf-richtext {
+    overflow-wrap: anywhere;
+  }
+
+  .pnf-richtext :where(p, ul, ol, blockquote) {
+    margin: 0.7rem 0;
+  }
+
+  .pnf-richtext p:empty,
+  .pnf-richtext p:has(> br:only-child) {
+    display: none;
+    margin: 0;
+  }
+
+  .pnf-richtext a {
+    color: hsl(var(--pnf-accent-strong));
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .pnf-richtext img {
+    width: 100%;
+    max-height: 18rem;
+    object-fit: contain;
+    margin-top: 0.75rem;
+    border-radius: 0.625rem;
+    border: 1px solid hsl(var(--pnf-border));
+    background: hsl(var(--pnf-surface-subtle));
+  }
+
+  @keyframes pnfRise {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

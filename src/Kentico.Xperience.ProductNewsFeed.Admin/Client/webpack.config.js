@@ -1,14 +1,14 @@
-const webpackMerge = require("webpack-merge");
+const webpackMerge = require('webpack-merge');
 
-const baseWebpackConfig = require("@kentico/xperience-webpack-config");
+const baseWebpackConfig = require('@kentico/xperience-webpack-config');
 
 module.exports = (opts, argv) => {
   const baseConfig = (webpackConfigEnv, argv) => {
     return baseWebpackConfig({
       // Sets the organizationName and projectName
       // The JS module is registered on the backend using these values
-      orgName: "acme",
-      projectName: "web-admin",
+      orgName: 'kentico',
+      projectName: 'xperience-integrations-product-news-feed-web-admin',
       webpackConfigEnv: webpackConfigEnv,
       argv: argv,
     });
@@ -20,16 +20,20 @@ module.exports = (opts, argv) => {
         {
           test: /\.(js|ts)x?$/,
           exclude: [/node_modules/],
-          loader: "babel-loader",
+          loader: 'babel-loader',
+        },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader', 'postcss-loader'],
         },
       ],
     },
     output: {
-      clean: true
+      clean: true,
     },
     // Webpack server configuration. Required when running the boilerplate in 'Proxy' mode.
     devServer: {
-      port: 3009,
+      port: 3030,
     },
   };
 

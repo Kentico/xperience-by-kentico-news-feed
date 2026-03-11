@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentitemdata.dancinggoat.productnewsfeedheadlessitem>
+  <ContentItemDataCommonDataID>
+    <GUID>382f3b45-eff1-4b83-b850-12c61899722b</GUID>
+    <ObjectType>cms.contentitemcommondata</ObjectType>
+    <Parent>
+      <CodeName>ProductNewsFeed-tfycvrkb</CodeName>
+      <GUID>88875f22-97a1-4dc6-9954-8273862fb9a2</GUID>
+      <ObjectType>cms.contentitem</ObjectType>
+    </Parent>
+  </ContentItemDataCommonDataID>
+  <ContentItemDataGUID>eaaeb4b4-f910-4214-bb56-fe4fedd79f65</ContentItemDataGUID>
+  <ProductNewsFeedHeadlessItemDescription>
+    <![CDATA[Learn all about Dancing Goat's latest product announcements and upcoming coffees.]]>
+  </ProductNewsFeedHeadlessItemDescription>
+  <ProductNewsFeedHeadlessItemNewsItemContents>
+    <![CDATA[[{"Identifier":"2e1e4ded-efcc-402f-808c-04c4d815f7b5"}]]]>
+  </ProductNewsFeedHeadlessItemNewsItemContents>
+  <ProductNewsFeedHeadlessItemTitle>Dancing Goat products</ProductNewsFeedHeadlessItemTitle>
+</contentitemdata.dancinggoat.productnewsfeedheadlessitem>

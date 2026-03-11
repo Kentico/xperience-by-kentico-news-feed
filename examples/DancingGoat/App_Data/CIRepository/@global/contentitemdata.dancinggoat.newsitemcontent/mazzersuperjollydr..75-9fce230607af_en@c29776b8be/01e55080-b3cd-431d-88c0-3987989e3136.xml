@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentitemdata.dancinggoat.newsitemcontent>
+  <ContentItemDataCommonDataID>
+    <GUID>f377c105-b17d-4991-ab75-9fce230607af</GUID>
+    <ObjectType>cms.contentitemcommondata</ObjectType>
+    <Parent>
+      <CodeName>MazzerSuperJollyDR-8u1kikco</CodeName>
+      <GUID>2e1e4ded-efcc-402f-808c-04c4d815f7b5</GUID>
+      <ObjectType>cms.contentitem</ObjectType>
+    </Parent>
+  </ContentItemDataCommonDataID>
+  <ContentItemDataGUID>01e55080-b3cd-431d-88c0-3987989e3136</ContentItemDataGUID>
+  <NewsItemContentCTALabel>Buy now</NewsItemContentCTALabel>
+  <NewsItemContentCTALinkURL>/products/mazzer-super-jolly-dr</NewsItemContentCTALinkURL>
+  <NewsItemContentDescriptionHTML>
+    <![CDATA[<p><img src="~/getContentAsset/85c64f44-4546-4327-a20a-a7934061c1b3/cc721195-df8f-4799-b974-5ade63036cab/mazer-super-jolly-dr.webp?language=en" alt="Mazzer Super Jolly DR" title="Mazzer Super Jolly DR" class="fr-fic fr-dib"></p><p>If you are a pro or at least serious about making coffee, the Mazzer Super Jolly DR is a great choice. Luxury cars are powerful and spacious; it's the same with this grinder. It provides you with a large hopper and doser with high-rev strong steel burrs powered by a 350-Watt engine.</p>]]>
+  </NewsItemContentDescriptionHTML>
+  <NewsItemContentPublishedDate>2026-03-11 03:40:46Z</NewsItemContentPublishedDate>
+  <NewsItemContentTags>
+    <![CDATA[[{"Identifier":"2fe7ed0f-2204-44c5-bcd2-3be0721b19c1"}]]]>
+  </NewsItemContentTags>
+  <NewsItemContentTitle>Mazzer Super Jolly DR</NewsItemContentTitle>
+</contentitemdata.dancinggoat.newsitemcontent>
