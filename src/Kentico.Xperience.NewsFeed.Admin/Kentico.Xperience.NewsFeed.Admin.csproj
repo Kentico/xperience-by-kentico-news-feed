@@ -1,11 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework Condition="'$(TargetFramework)' == ''">net10.0</TargetFramework>
+    <Product>Xperience by Kentico News Feed Administration module</Product>
+    <Title>$(Product)</Title>
+    <PackageId>Kentico.Xperience.NewsFeed.Admin</PackageId>
+    <Description>Adds Administration application UI for Xperience by Kentico News Feed.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <AdminOrgName>kentico</AdminOrgName>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Requires that npm run build or npm run build:dev was executed _before_ the .NET build -->
+    <!-- Requires that npm run build was executed _before_ the .NET build -->
     <AdminClientPath Include="Client\dist\**" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
       <ProjectName>xperience-integrations-news-feed-web-admin</ProjectName>
     </AdminClientPath>

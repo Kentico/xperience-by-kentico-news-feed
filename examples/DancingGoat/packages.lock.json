@@ -67,9 +67,9 @@
       },
       "Microsoft.AspNetCore.App.Internal.Assets": {
         "type": "Direct",
-        "requested": "[10.0.3, )",
-        "resolved": "10.0.3",
-        "contentHash": "mr3Zn+ht8lijYvlMIasftw9opU9hsLKDdnOgQMmYI3RjWPJLOF9l8+YHDseRkTs97wOrULmJgo/NDCmzL/EGDg=="
+        "requested": "[10.0.4, )",
+        "resolved": "10.0.4",
+        "contentHash": "M942X5Vy726SlvFBuoAC4cDczEMlPAFt1mmyFlrkw/QcpdVwVU0DkF4P9JabxX6eWNm9RvaYZHe25FN7oXoxpQ=="
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
@@ -888,10 +888,10 @@
           "System.IO.Hashing": "8.0.0"
         }
       },
-      "Kentico.Xperience.NewsFeed": {
+      "kentico.xperience.newsfeed": {
         "type": "Project"
       },
-      "Kentico.Xperience.NewsFeed.admin": {
+      "kentico.xperience.newsfeed.admin": {
         "type": "Project",
         "dependencies": {
           "Kentico.Xperience.NewsFeed": "[1.0.0-prerelease-1, )",

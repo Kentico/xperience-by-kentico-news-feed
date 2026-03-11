@@ -15,7 +15,7 @@ The requirements to setup, develop, and build this project are listed below.
 
 - [Node.js](https://nodejs.org/en/download) v24 or newer
 - [NVM for Windows](https://github.com/coreybutler/nvm-windows) to manage multiple installed versions of Node.js
-- See `engines` in the solution `package.json` for specific version requirements
+- See `engines` in `src/Kentico.Xperience.NewsFeed.Admin/Client/package.json` for specific version requirements
 
 ### C# Editor
 
@@ -49,10 +49,10 @@ To run the Sample app Admin customization in development mode, add the following
 
 ```json
 "CMSAdminClientModuleSettings": {
-  "kentico-xperience-integrations-news-feed": {
-    "Mode": "Proxy",
-    "Port": 3009
-  }
+   "kentico-xperience-integrations-news-feed-web-admin": {
+      "Mode": "Proxy",
+      "Port": 3030
+   }
 }
 ```
 
