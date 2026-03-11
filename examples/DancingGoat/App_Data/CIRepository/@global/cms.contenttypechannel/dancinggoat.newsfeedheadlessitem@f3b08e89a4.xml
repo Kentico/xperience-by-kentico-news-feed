@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.contenttypechannel>
+  <Parent>
+    <CodeName>DancingGoat.NewsFeedHeadlessItem</CodeName>
+    <GUID>6f4981c3-da29-4607-a237-9e81fe6a3409</GUID>
+    <ObjectType>cms.contenttype</ObjectType>
+  </Parent>
+  <Bindings>
+    <Binding id="cms.channel_NewsFeed">
+      <ContentTypeChannelChannelID>
+        <CodeName>NewsFeed</CodeName>
+        <GUID>b0442e0b-ca77-483a-93c7-1418e9fa4e3e</GUID>
+        <ObjectType>cms.channel</ObjectType>
+      </ContentTypeChannelChannelID>
+    </Binding>
+  </Bindings>
+</cms.contenttypechannel>

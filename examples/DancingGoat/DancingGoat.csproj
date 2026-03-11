@@ -32,6 +32,6 @@
     <PackageReference Include="kentico.xperience.webapp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Kentico.Xperience.ProductNewsFeed.Admin\Kentico.Xperience.ProductNewsFeed.Admin.csproj" />
+    <ProjectReference Include="..\..\src\Kentico.Xperience.NewsFeed.Admin\Kentico.Xperience.NewsFeed.Admin.csproj" />
   </ItemGroup>
 </Project>

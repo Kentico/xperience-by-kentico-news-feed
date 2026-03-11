@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Kentico.Xperience.NewsFeed.Admin/Kentico.Xperience.NewsFeed.Admin.csproj" />
+  <Project Path="Kentico.Xperience.NewsFeed/Kentico.Xperience.NewsFeed.csproj" />
+</Solution>

@@ -1,51 +1,97 @@
-# Xperience by Kentico Product News Feed
+# Xperience by Kentico News Feed
 
-[![Kentico Labs](https://img.shields.io/badge/Kentico_Labs-grey?labelColor=orange&logo=data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ic3ZnLWljb24iIHN0eWxlPSJ3aWR0aDogMWVtOyBoZWlnaHQ6IDFlbTt2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO2ZpbGw6IGN1cnJlbnRDb2xvcjtvdmVyZmxvdzogaGlkZGVuOyIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik05NTYuMjg4IDgwNC40OEw2NDAgMjc3LjQ0VjY0aDMyYzE3LjYgMCAzMi0xNC40IDMyLTMycy0xNC40LTMyLTMyLTMyaC0zMjBjLTE3LjYgMC0zMiAxNC40LTMyIDMyczE0LjQgMzIgMzIgMzJIMzg0djIxMy40NEw2Ny43MTIgODA0LjQ4Qy00LjczNiA5MjUuMTg0IDUxLjIgMTAyNCAxOTIgMTAyNGg2NDBjMTQwLjggMCAxOTYuNzM2LTk4Ljc1MiAxMjQuMjg4LTIxOS41MnpNMjQxLjAyNCA2NDBMNDQ4IDI5NS4wNFY2NGgxMjh2MjMxLjA0TDc4Mi45NzYgNjQwSDI0MS4wMjR6IiAgLz48L3N2Zz4=)](https://github.com/Kentico/.github/blob/main/SUPPORT.md#labs-limited-support) [![CI: Build and Test](https://github.com/Kentico/xperience-by-kentico-product-news-feed/actions/workflows/ci.yml/badge.svg)](https://github.com/Kentico/xperience-by-kentico-product-news-feed/actions/workflows/ci.yml)
+[![Kentico Labs](https://img.shields.io/badge/Kentico_Labs-grey?labelColor=orange&logo=data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ic3ZnLWljb24iIHN0eWxlPSJ3aWR0aDogMWVtOyBoZWlnaHQ6IDFlbTt2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO2ZpbGw6IGN1cnJlbnRDb2xvcjtvdmVyZmxvdzogaGlkZGVuOyIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik05NTYuMjg4IDgwNC40OEw2NDAgMjc3LjQ0VjY0aDMyYzE3LjYgMCAzMi0xNC40IDMyLTMycy0xNC40LTMyLTMyLTMyaC0zMjBjLTE3LjYgMC0zMiAxNC40LTMyIDMyczE0LjQgMzIgMzIgMzJIMzg0djIxMy40NEw2Ny43MTIgODA0LjQ4Qy00LjczNiA5MjUuMTg0IDUxLjIgMTAyNCAxOTIgMTAyNGg2NDBjMTQwLjggMCAxOTYuNzM2LTk4Ljc1MiAxMjQuMjg4LTIxOS41MnpNMjQxLjAyNCA2NDBMNDQ4IDI5NS4wNFY2NGgxMjh2MjMxLjA0TDc4Mi45NzYgNjQwSDI0MS4wMjR6IiAgLz48L3N2Zz4=)](https://github.com/Kentico/.github/blob/main/SUPPORT.md#labs-limited-support) [![CI: Build and Test](https://github.com/Kentico/xperience-by-kentico-news-feed/actions/workflows/ci.yml/badge.svg)](https://github.com/Kentico/xperience-by-kentico-news-feed/actions/workflows/ci.yml)
 
 ## Description
 
-An experimental integration to deliver Xperience by Kentico news directly into the Xperience administration
+An experimental integration to deliver news directly into the Xperience administration.
 
 ## Requirements
 
 ### Library Version Matrix
 
----This matrix explains which versions of the library are compatible with different versions of Xperience by Kentico---
-
 | Xperience Version | Library Version |
 | ----------------- | --------------- |
-| >= 31.2.0         | 1.0.0           |
+| >= 31.2.1         | 1.0.0           |
 
 ### Dependencies
 
----These are all the dependencies required to use (not build) the library---
-
-- [ASP.NET Core 8.0](https://dotnet.microsoft.com/en-us/download)
+- [ASP.NET Core 10.0](https://dotnet.microsoft.com/en-us/download)
 - [Xperience by Kentico](https://docs.kentico.com)
 
 ### Other requirements
 
----A list of other requirements and prerequisites needed to use the library. If there are none, don't include this section in the readme.---
+This integration can serve news content from any source, but it is designed to work with [Xperience by Kentico headless channels](https://docs.kentico.com/x/nYWOD). The demo project included in this repository includes an example headless channel and headless item for a news feed.
 
 ## Package Installation
-
----This details the steps required to add the library to a solution. This could include multiple packages (NuGet and/or npm)---
 
 Add the package to your application using the .NET CLI
 
 ```powershell
-dotnet add package Kentico.Xperience.ProductNewsFeed
+dotnet add package Kentico.Xperience.NewsFeed.Admin
 ```
 
 ## Quick Start
 
----Minimal steps to get started with the library. Support the steps with helpful screenshots.---
+Use these minimal steps to get the integration running. For a full walkthrough and deeper customization, use [Usage Guide](./docs/Usage-Guide.md).
 
----You can completely omit this section if the setup is complicated and cannot be realistically condensed into a few steps. Instead, describe everything in detail in _Usage-Guide.md_.---
+1. Register News Feed services in your app startup.
+
+Use [examples/DancingGoat/Program.cs](examples/DancingGoat/Program.cs) as reference and add:
+
+```csharp
+using Kentico.Xperience.NewsFeed;
+using Kentico.Xperience.NewsFeed.Admin;
+
+builder.Services.AddNewsFeed<NewsFeedGraphqlService>(builder.Configuration);
+```
+
+1. Configure the `Kentico:NewsFeed` section in your `appsettings.json`.
+
+Use [examples/DancingGoat/appsettings.json](examples/DancingGoat/appsettings.json) as reference:
+
+```json
+"Kentico": {
+  "NewsFeed": {
+    "EndpointUrl": "https://<your-headless-endpoint>/graphql/<channel-guid>",
+    "FeedItemId": "<headless-item-guid>",
+    "BearerToken": "<bearer-token>",
+    "CacheDurationMinutes": 5
+  }
+}
+```
+
+1. Register the admin page application attribute.
+
+Use [examples/DancingGoat/Program.cs](examples/DancingGoat/Program.cs) as reference:
+
+```csharp
+[assembly: UICategory(
+    "DancingGoat.Admin.NewsFeed.Category",
+    "Dancing Goat",
+    Icons.Cup,
+    100)]
+[assembly: UIApplication(
+    "Kentico.Xperience.NewsFeed.Admin.Application",
+    typeof(NewsFeedTemplatePage),
+    "<page-slug>",
+    "News Feed",
+    "<your-category>",
+    Icons.Cup,
+    "@kentico/xperience-integrations-news-feed-web-admin/NewsFeed")]
+```
+
+Registering these in your own application gives you full control over how they are presented.
+
+1. Implement and register an `INewsFeedService`.
+
+A working example is available in [examples/DancingGoat/Services/NewsFeedGraphqlService.cs](examples/DancingGoat/Services/NewsFeedGraphqlService.cs).
+
+1. Run your application and open Xperience admin.
+
+Navigate to the registered "News Feed" application page and confirm feed items are loaded.
 
 ## Full Instructions
-
----Add the full instructions, guidance, and tips to the _Usage-Guide.md_ file---
 
 View the [Usage Guide](./docs/Usage-Guide.md) for more detailed instructions.
 

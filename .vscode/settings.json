@@ -31,11 +31,11 @@
     "editor.defaultFormatter": "ms-dotnettools.csharp"
   },
 
-  "dotnet.defaultSolution": "Kentico.Xperience.ProductNewsFeed.slnx",
-  "dotnet.solution.autoOpen": "Kentico.Xperience.ProductNewsFeed.slnx",
+  "dotnet.defaultSolution": "Kentico.Xperience.NewsFeed.slnx",
+  "dotnet.solution.autoOpen": "Kentico.Xperience.NewsFeed.slnx",
 
   "eslint.workingDirectories": [
-    "./src/Kentico.Xperience.ProductNewsFeed.Admin/Client"
+    "./src/Kentico.Xperience.NewsFeed.Admin/Client"
   ],
 
   "files.associations": {

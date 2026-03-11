@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.contentitemcommondata>
+  <ContentItemCommonDataContentItemID>
+    <CodeName>DancingGoatProductsFeed-ue78rage</CodeName>
+    <GUID>126c371f-0f79-40dd-85ee-5db6f3dd5212</GUID>
+    <ObjectType>cms.contentitem</ObjectType>
+  </ContentItemCommonDataContentItemID>
+  <ContentItemCommonDataContentLanguageID>
+    <CodeName>en</CodeName>
+    <GUID>e4a8fb12-ebc2-45d0-930f-c9fba2780c85</GUID>
+    <ObjectType>cms.contentlanguage</ObjectType>
+  </ContentItemCommonDataContentLanguageID>
+  <ContentItemCommonDataFirstPublishedWhen>2026-03-11 04:30:18Z</ContentItemCommonDataFirstPublishedWhen>
+  <ContentItemCommonDataGUID>f8d58de7-1635-48f5-81aa-383a412f5a5d</ContentItemCommonDataGUID>
+  <ContentItemCommonDataIsLatest>True</ContentItemCommonDataIsLatest>
+  <ContentItemCommonDataLastPublishedWhen>2026-03-11 04:30:18Z</ContentItemCommonDataLastPublishedWhen>
+  <ContentItemCommonDataVersionStatus>2</ContentItemCommonDataVersionStatus>
+  <ContentItemReferences>
+    <cms.contentitemreference>
+      <ContentItemReferenceGroupGUID>815899cc-c4ae-4edc-af18-3bd97cdf1b18</ContentItemReferenceGroupGUID>
+      <ContentItemReferenceGUID>f4ae1c0a-5d2b-4a4a-81d9-172f7eac17af</ContentItemReferenceGUID>
+      <ContentItemReferenceSourceCommonDataID>
+        <GUID>f8d58de7-1635-48f5-81aa-383a412f5a5d</GUID>
+        <ObjectType>cms.contentitemcommondata</ObjectType>
+      </ContentItemReferenceSourceCommonDataID>
+      <ContentItemReferenceTargetItemID>
+        <CodeName>MazzerSuperJollyDR-8u1kikco</CodeName>
+        <GUID>2e1e4ded-efcc-402f-808c-04c4d815f7b5</GUID>
+        <ObjectType>cms.contentitem</ObjectType>
+      </ContentItemReferenceTargetItemID>
+    </cms.contentitemreference>
+  </ContentItemReferences>
+</cms.contentitemcommondata>

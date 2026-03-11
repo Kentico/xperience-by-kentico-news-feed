@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.contentitem>
+  <ContentItemChannelID>
+    <CodeName>NewsFeed</CodeName>
+    <GUID>b0442e0b-ca77-483a-93c7-1418e9fa4e3e</GUID>
+    <ObjectType>cms.channel</ObjectType>
+  </ContentItemChannelID>
+  <ContentItemContentTypeID>
+    <CodeName>DancingGoat.NewsFeedHeadlessItem</CodeName>
+    <GUID>6f4981c3-da29-4607-a237-9e81fe6a3409</GUID>
+    <ObjectType>cms.contenttype</ObjectType>
+  </ContentItemContentTypeID>
+  <ContentItemGUID>126c371f-0f79-40dd-85ee-5db6f3dd5212</ContentItemGUID>
+  <ContentItemIsReusable>False</ContentItemIsReusable>
+  <ContentItemIsSecured>False</ContentItemIsSecured>
+  <ContentItemName>DancingGoatProductsFeed-ue78rage</ContentItemName>
+</cms.contentitem>

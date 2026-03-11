@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/examples/">
+    <Project Path="examples/DancingGoat/DancingGoat.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Kentico.Xperience.NewsFeed.Admin/Kentico.Xperience.NewsFeed.Admin.csproj" />
+    <Project Path="src/Kentico.Xperience.NewsFeed/Kentico.Xperience.NewsFeed.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Kentico.Xperience.NewsFeed.Tests/Kentico.Xperience.NewsFeed.Tests.csproj" />
+  </Folder>
+</Solution>

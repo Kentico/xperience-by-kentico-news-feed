@@ -31,7 +31,7 @@ stages:
             value: true
 
           - name: slnPath
-            value: src/Kentico.Xperience.ProductNewsFeed.Libs.slnx
+            value: src/Kentico.Xperience.NewsFeed.Libs.slnx
 
         steps:
           - task: UseDotNet@2
@@ -43,7 +43,7 @@ stages:
             inputs:
               targetType: inline
               script: |
-                $fileContent = Get-Content -Path 'src/Kentico.Xperience.ProductNewsFeed.Admin/Client/package.json' -Raw
+                $fileContent = Get-Content -Path 'src/Kentico.Xperience.NewsFeed.Admin/Client/package.json' -Raw
                 $jsonObject = ConvertFrom-Json -InputObject $fileContent
 
                 # Get the value of engines.node
@@ -96,11 +96,11 @@ stages:
               Configuration: $(Configuration)
               artifacts:
                 - Core:
-                  artifactName: "Kentico.Xperience.ProductNewsFeed"
-                  projectPath: "src/Kentico.Xperience.ProductNewsFeed"
+                  artifactName: "Kentico.Xperience.NewsFeed"
+                  projectPath: "src/Kentico.Xperience.NewsFeed"
                 - Admin:
-                  artifactName: "Kentico.Xperience.ProductNewsFeed-Admin"
-                  projectPath: "src/Kentico.Xperience.ProductNewsFeed.Admin"
+                  artifactName: "Kentico.Xperience.NewsFeed-Admin"
+                  projectPath: "src/Kentico.Xperience.NewsFeed.Admin"
 
   - ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/main') }}:
       - stage: PublishNuGetPackages

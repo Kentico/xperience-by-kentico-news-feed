@@ -34,7 +34,7 @@ The flow works as follows:
 ### File Organization
 
 Backend pages belong in
-`src/Kentico.Xperience.ProductNewsFeed.Admin/Features/{FeatureName}/`:
+`src/Kentico.Xperience.NewsFeed.Admin/Features/{FeatureName}/`:
 
 - `{FeatureName}ApplicationPage.cs` – Root application page (entry point for a
   feature section)
@@ -49,7 +49,7 @@ registered with the `UIApplication` assembly attribute and use
 
 ```csharp
 using CMS.Membership;
-using Kentico.Xperience.ProductNewsFeed.Admin;
+using Kentico.Xperience.NewsFeed.Admin;
 using Kentico.Xperience.Admin.Base;
 
 [assembly: UIApplication(
@@ -61,7 +61,7 @@ using Kentico.Xperience.Admin.Base;
     icon: Icons.Settings,
     templateName: TemplateNames.SECTION_LAYOUT)]
 
-namespace Kentico.Xperience.ProductNewsFeed.Admin.Features.Example;
+namespace Kentico.Xperience.NewsFeed.Admin.Features.Example;
 
 [UIPermission(SystemPermissions.VIEW)]
 [UIPermission(SystemPermissions.UPDATE)]
@@ -99,7 +99,7 @@ using Kentico.Xperience.Admin.Base;
     order: 1,
     Icon = Icons.Cog)]
 
-namespace Kentico.Xperience.ProductNewsFeed.Admin.Features.Example;
+namespace Kentico.Xperience.NewsFeed.Admin.Features.Example;
 
 public class ExampleManagementPage(IExampleService exampleService) : Page<ExampleManagementPageClientProperties>
 {
@@ -252,7 +252,7 @@ return NavigateTo(pageLinkGenerator.GetPath(typeof(AnotherPage)))
 
 ### File Organization
 
-Frontend components belong in `src/Kentico.Xperience.ProductNewsFeed.Admin/Client/src/`:
+Frontend components belong in `src/Kentico.Xperience.NewsFeed.Admin/Client/src/`:
 
 - `layouts/` – Page templates (exported as `{Name}LayoutTemplate` or
   `{Name}Template`)
@@ -498,7 +498,7 @@ command handler.
 **Backend** – `Features/Example/ExampleApplicationPage.cs`:
 
 ```csharp
-using Kentico.Xperience.ProductNewsFeed.Admin;
+using Kentico.Xperience.NewsFeed.Admin;
 using Kentico.Xperience.Admin.Base;
 
 [assembly: UIApplication(
@@ -510,7 +510,7 @@ using Kentico.Xperience.Admin.Base;
     icon: Icons.Settings,
     templateName: TemplateNames.SECTION_LAYOUT)]
 
-namespace Kentico.Xperience.ProductNewsFeed.Admin.Features.Example;
+namespace Kentico.Xperience.NewsFeed.Admin.Features.Example;
 
 public class ExampleApplicationPage : ApplicationPage
 {
@@ -533,7 +533,7 @@ using Kentico.Xperience.Admin.Base;
     order: 1,
     Icon = Icons.Eye)]
 
-namespace Kentico.Xperience.ProductNewsFeed.Admin.Features.Example;
+namespace Kentico.Xperience.NewsFeed.Admin.Features.Example;
 
 [UIPermission(SystemPermissions.VIEW)]
 public class ExamplePage(IExampleService service) : Page<ExamplePageClientProperties>

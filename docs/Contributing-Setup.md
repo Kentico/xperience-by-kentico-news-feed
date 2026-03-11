@@ -49,7 +49,7 @@ To run the Sample app Admin customization in development mode, add the following
 
 ```json
 "CMSAdminClientModuleSettings": {
-  "kentico-xperience-integrations-product-news-feed": {
+  "kentico-xperience-integrations-news-feed": {
     "Mode": "Proxy",
     "Port": 3009
   }
@@ -63,7 +63,7 @@ To run the Sample app Admin customization in development mode, add the following
    - `refactor/` - for restructuring of existing features
    - `fix/` - for bugfixes
 
-1. Run `dotnet format` against the `Kentico.Xperience.ProductNewsFeed` solution
+1. Run `dotnet format` against the `Kentico.Xperience.NewsFeed` solution
 
    > use `dotnet: format` VS Code task.
 

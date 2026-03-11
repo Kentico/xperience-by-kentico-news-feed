@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cms.headlessitem>
+  <HeadlessItemContentItemID>
+    <CodeName>DancingGoatProductsFeed-ue78rage</CodeName>
+    <GUID>126c371f-0f79-40dd-85ee-5db6f3dd5212</GUID>
+    <ObjectType>cms.contentitem</ObjectType>
+  </HeadlessItemContentItemID>
+  <HeadlessItemGUID>f0632c25-9c00-4059-98a6-48c6b39d501b</HeadlessItemGUID>
+  <HeadlessItemHeadlessChannelID>
+    <GUID>111e78a6-bbd7-4be0-b5bf-221416fae0ae</GUID>
+    <ObjectType>cms.headlesschannel</ObjectType>
+    <Parent>
+      <CodeName>NewsFeed</CodeName>
+      <GUID>b0442e0b-ca77-483a-93c7-1418e9fa4e3e</GUID>
+      <ObjectType>cms.channel</ObjectType>
+    </Parent>
+  </HeadlessItemHeadlessChannelID>
+  <HeadlessItemName>DancingGoatProductsFeed-ue78rage</HeadlessItemName>
+</cms.headlessitem>

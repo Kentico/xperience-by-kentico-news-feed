@@ -8,11 +8,11 @@ directive @cost(
   weight: String!
 ) on SCALAR | OBJECT | FIELD_DEFINITION | ARGUMENT_DEFINITION | ENUM | INPUT_FIELD_DEFINITION
 
-type DancingGoatProductNewsFeedHeadlessItem {
+type DancingGoatNewsFeedHeadlessItem {
   _system: _System!
-  productNewsFeedHeadlessItemTitle: String
-  productNewsFeedHeadlessItemDescription: String
-  productNewsFeedHeadlessItemNewsItemContents(
+  newsFeedHeadlessItemTitle: String
+  newsFeedHeadlessItemDescription: String
+  newsFeedHeadlessItemNewsItemContents(
     """
     pagination skip
     """
@@ -27,8 +27,8 @@ type DancingGoatProductNewsFeedHeadlessItem {
   ): _DancingGoatNewsItemContentCollection!
 }
 
-type _DancingGoatProductNewsFeedHeadlessItemCollection {
-  items: [DancingGoatProductNewsFeedHeadlessItem!]!
+type _DancingGoatNewsFeedHeadlessItemCollection {
+  items: [DancingGoatNewsFeedHeadlessItem!]!
 
   """
   Specified pagination skip.
@@ -46,16 +46,16 @@ type _DancingGoatProductNewsFeedHeadlessItemCollection {
   totalCount: Int!
 }
 
-input _DancingGoatProductNewsFeedHeadlessItemSorter {
+input _DancingGoatNewsFeedHeadlessItemSorter {
   _system: _SystemFieldsSorter
-  productNewsFeedHeadlessItemTitle: _Sorter
-  productNewsFeedHeadlessItemDescription: _Sorter
+  newsFeedHeadlessItemTitle: _Sorter
+  newsFeedHeadlessItemDescription: _Sorter
 }
 
-input _DancingGoatProductNewsFeedHeadlessItemFilter {
+input _DancingGoatNewsFeedHeadlessItemFilter {
   _system: _SystemFieldsFilter
-  productNewsFeedHeadlessItemTitle: _TextFilter
-  productNewsFeedHeadlessItemDescription: _LongtextFilter
+  newsFeedHeadlessItemTitle: _TextFilter
+  newsFeedHeadlessItemDescription: _LongtextFilter
 }
 
 type DancingGoatNewsItemContent {
@@ -107,7 +107,7 @@ input _DancingGoatNewsItemContentFilter {
 }
 
 type Query {
-  dancingGoatProductNewsFeedHeadlessItem(
+  dancingGoatNewsFeedHeadlessItem(
     """
     content item GUID
     """
@@ -127,8 +127,8 @@ type Query {
     fallback to allowed languages
     """
     useLanguageFallbacks: Boolean
-  ): DancingGoatProductNewsFeedHeadlessItem
-  dancingGoatProductNewsFeedHeadlessItemCollection(
+  ): DancingGoatNewsFeedHeadlessItem
+  dancingGoatNewsFeedHeadlessItemCollection(
     """
     pagination skip
     """
@@ -148,9 +148,9 @@ type Query {
     fallback to allowed languages
     """
     useLanguageFallbacks: Boolean
-    sort: _DancingGoatProductNewsFeedHeadlessItemSorter
-    where: _DancingGoatProductNewsFeedHeadlessItemFilter
-  ): _DancingGoatProductNewsFeedHeadlessItemCollection!
+    sort: _DancingGoatNewsFeedHeadlessItemSorter
+    where: _DancingGoatNewsFeedHeadlessItemFilter
+  ): _DancingGoatNewsFeedHeadlessItemCollection!
 }
 
 enum _Sorter {
