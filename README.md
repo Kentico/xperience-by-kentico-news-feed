@@ -2,14 +2,20 @@
 
 [![Kentico Labs](https://img.shields.io/badge/Kentico_Labs-grey?labelColor=orange&logo=data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ic3ZnLWljb24iIHN0eWxlPSJ3aWR0aDogMWVtOyBoZWlnaHQ6IDFlbTt2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO2ZpbGw6IGN1cnJlbnRDb2xvcjtvdmVyZmxvdzogaGlkZGVuOyIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik05NTYuMjg4IDgwNC40OEw2NDAgMjc3LjQ0VjY0aDMyYzE3LjYgMCAzMi0xNC40IDMyLTMycy0xNC40LTMyLTMyLTMyaC0zMjBjLTE3LjYgMC0zMiAxNC40LTMyIDMyczE0LjQgMzIgMzIgMzJIMzg0djIxMy40NEw2Ny43MTIgODA0LjQ4Qy00LjczNiA5MjUuMTg0IDUxLjIgMTAyNCAxOTIgMTAyNGg2NDBjMTQwLjggMCAxOTYuNzM2LTk4Ljc1MiAxMjQuMjg4LTIxOS41MnpNMjQxLjAyNCA2NDBMNDQ4IDI5NS4wNFY2NGgxMjh2MjMxLjA0TDc4Mi45NzYgNjQwSDI0MS4wMjR6IiAgLz48L3N2Zz4=)](https://github.com/Kentico/.github/blob/main/SUPPORT.md#labs-limited-support) [![CI: Build and Test](https://github.com/Kentico/xperience-by-kentico-news-feed/actions/workflows/ci.yml/badge.svg)](https://github.com/Kentico/xperience-by-kentico-news-feed/actions/workflows/ci.yml)
 
-| Package                              | NuGet                                                                                                                                                                                                   |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Package                          | NuGet                                                                                                                                                                                       |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Kentico.Xperience.NewsFeed       | [![Kentico.Xperience.NewsFeed - NuGet Package](https://img.shields.io/nuget/v/Kentico.Xperience.NewsFeed.svg)](https://www.nuget.org/packages/Kentico.Xperience.NewsFeed)                   |
 | Kentico.Xperience.NewsFeed.Admin | [![Kentico.Xperience.NewsFeed.Admin - NuGet Package](https://img.shields.io/nuget/v/Kentico.Xperience.NewsFeed.Admin.svg)](https://www.nuget.org/packages/Kentico.Xperience.NewsFeed.Admin) |
 
 ## Description
 
 An experimental integration to deliver news directly into the Xperience administration.
+
+This project is an example of using [headless channels and content in Xperience by Kentico](https://docs.kentico.com/x/xIWOD) to drive experiences and messaging into channels that were traditionally difficult to reach, while keeping the marketer in control of what's delivered. Contrast this with technologies like RSS feeds or developer-designed HTTP APIs - both of which are often data dumps or based on business rules that aren't very flexible.
+
+- An always up to date list of news about Xperience by Kentico for customers and partners.
+- News and insights from a digital agency, delivered into their client's Xperience projects.
+- Internal "intranet"-style company updates and news
 
 ## Screenshots
 
