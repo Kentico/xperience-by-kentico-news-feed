@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdminClientPath Include="Client\dist\**">
+    <!-- Requires that npm run build or npm run build:dev was executed _before_ the .NET build -->
+    <AdminClientPath Include="Client\dist\**" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
       <ProjectName>xperience-integrations-news-feed-web-admin</ProjectName>
     </AdminClientPath>
   </ItemGroup>
@@ -20,6 +21,19 @@
     <EmbeddedResource Remove="Client\node_modules\**" />
     <None Remove="Client\node_modules\**" />
   </ItemGroup>
+
+  <Target Name="NpmInstall" BeforeTargets="NpmBuildClient" Condition=" '$(Configuration)|$(Platform)' != 'Debug|AnyCPU' ">
+    <Exec Command="npm ci --no-audit --no-fund" WorkingDirectory="$(MSBuildProjectDirectory)\Client" />
+  </Target>
+  <Target Name="NpmBuildClient" BeforeTargets="BeforeBuild" Condition=" '$(Configuration)|$(Platform)' != 'Debug|AnyCPU' ">
+    <Exec Command="npm run build" WorkingDirectory="$(MSBuildProjectDirectory)\Client" />
+
+    <ItemGroup>
+      <AdminClientPath Include="Client\dist\**">
+        <ProjectName>xperience-integrations-news-feed-web-admin</ProjectName>
+      </AdminClientPath>
+    </ItemGroup>
+  </Target>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />

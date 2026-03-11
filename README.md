@@ -6,6 +6,14 @@
 
 An experimental integration to deliver news directly into the Xperience administration.
 
+## Screenshots
+
+![News Feed highlighted in the Xperience administration dashboard](./images/administration-dashboard-news-feed-highlight.jpg)
+
+![News Feed administration page](./images/administration-news-feed.jpg)
+
+![News Feed headless item editing](./images/news-feed-headless-item-edit.jpg)
+
 ## Requirements
 
 ### Library Version Matrix
@@ -76,7 +84,7 @@ Use [examples/DancingGoat/Program.cs](examples/DancingGoat/Program.cs) as refere
     typeof(NewsFeedTemplatePage),
     "<page-slug>",
     "News Feed",
-    "<your-category>",
+    "DancingGoat.Admin.NewsFeed.Category",
     Icons.Cup,
     "@kentico/xperience-integrations-news-feed-web-admin/NewsFeed")]
 ```
