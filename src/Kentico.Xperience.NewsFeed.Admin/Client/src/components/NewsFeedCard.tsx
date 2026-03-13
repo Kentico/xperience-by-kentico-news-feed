@@ -1,8 +1,10 @@
 import * as React from 'react';
+import { useGlobalization } from '@kentico/xperience-admin-base';
 
 import { LinkButton } from './design-system/Button/LinkButton';
 import { Card } from './design-system/Card/Card';
 import { Tag } from './design-system/Tag/Tag';
+import { TagMode } from './design-system/Tag/Tag.types';
 
 export interface NewsFeedItem {
   heading: string;
@@ -18,12 +20,35 @@ interface NewsFeedCardProps {
 }
 
 export const NewsFeedCard = ({ item }: NewsFeedCardProps) => {
+  const { uiLocale } = useGlobalization();
+
+  const publishedDate = React.useMemo(() => {
+    if (!item.publishedAtUtc) {
+      return null;
+    }
+
+    const timestamp = Date.parse(item.publishedAtUtc);
+    if (Number.isNaN(timestamp)) {
+      return null;
+    }
+
+    return new Date(timestamp).toLocaleDateString(uiLocale, {
+      dateStyle: 'medium',
+    });
+  }, [item.publishedAtUtc, uiLocale]);
+
   return (
     <Card headline={item.heading || 'Untitled update'}>
+      {publishedDate ? (
+        <p className="mb-3 text-xs font-medium uppercase tracking-[0.08em] text-[var(--color-text-low-emphasis)]">
+          {publishedDate}
+        </p>
+      ) : null}
+
       {item.tags.length > 0 ? (
         <div className="flex flex-wrap gap-2 mb-3">
           {item.tags.map((tag) => (
-            <Tag key={tag} label={tag} readOnly />
+            <Tag key={tag} label={tag} mode={TagMode.Blue} readOnly />
           ))}
         </div>
       ) : null}

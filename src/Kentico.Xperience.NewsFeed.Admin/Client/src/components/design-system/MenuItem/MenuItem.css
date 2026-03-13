@@ -48,9 +48,8 @@
 
   .MenuItem .MenuItem-primaryLabel {
     display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    overflow-wrap: anywhere;
+    white-space: normal;
     font-family: var(--typeface-product-primary);
     font-size: calc(var(--font-size-s) + 1px);
     line-height: var(--line-m);

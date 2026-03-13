@@ -82,4 +82,10 @@
     border: 1px solid var(--pnf-border);
     background: var(--pnf-surface-subtle);
   }
+
+  .pnf-toc-entries {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+  }
 }

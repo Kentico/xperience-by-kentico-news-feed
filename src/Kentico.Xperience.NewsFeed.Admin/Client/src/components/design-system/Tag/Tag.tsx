@@ -5,15 +5,12 @@ import { TagMode, type TagProps } from './Tag.types';
 import './Tag.css';
 
 export const Tag = ({ label, mode = TagMode.Light, className }: TagProps) => {
-  return (
-    <span
-      className={cn(
-        'Tag',
-        mode === TagMode.Dark ? 'Tag-dark' : 'Tag-light',
-        className,
-      )}
-    >
-      {label}
-    </span>
-  );
+  const modeClass =
+    mode === TagMode.Dark
+      ? 'Tag-dark'
+      : mode === TagMode.Blue
+        ? 'Tag-blue'
+        : 'Tag-light';
+
+  return <span className={cn('Tag', modeClass, className)}>{label}</span>;
 };

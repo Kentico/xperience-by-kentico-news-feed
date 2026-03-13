@@ -2,7 +2,6 @@ import type { MouseEventHandler } from 'react';
 
 export interface MenuItemProps {
   readonly primaryLabel: string;
-  readonly tooltipText?: string;
   readonly secondaryLabel?: string;
   readonly selected?: boolean;
   readonly disabled?: boolean;

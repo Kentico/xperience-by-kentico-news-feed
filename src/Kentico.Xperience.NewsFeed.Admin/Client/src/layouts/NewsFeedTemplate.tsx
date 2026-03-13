@@ -1,6 +1,9 @@
 import * as React from 'react';
 
-import { usePageCommand } from '@kentico/xperience-admin-base';
+import {
+  useGlobalization,
+  usePageCommand,
+} from '@kentico/xperience-admin-base';
 
 import {
   Button,
@@ -31,6 +34,7 @@ interface NewsFeedLayoutProps {
 type RefreshFeedResult = NewsFeedLayoutProps;
 
 export const NewsFeedTemplate = (props: NewsFeedLayoutProps) => {
+  const { uiLocale } = useGlobalization();
   const [layoutProps, setLayoutProps] =
     React.useState<NewsFeedLayoutProps>(props);
   const [isLoading, setIsLoading] = React.useState(true);
@@ -128,7 +132,7 @@ export const NewsFeedTemplate = (props: NewsFeedLayoutProps) => {
     sortedItems.forEach((item, index) => {
       const publishedTimestamp = getPublishedTimestamp(item);
       const label = publishedTimestamp
-        ? new Date(publishedTimestamp).toLocaleDateString(undefined, {
+        ? new Date(publishedTimestamp).toLocaleDateString(uiLocale, {
             year: 'numeric',
             month: 'long',
           })
@@ -147,11 +151,11 @@ export const NewsFeedTemplate = (props: NewsFeedLayoutProps) => {
     });
 
     return groups;
-  }, [sortedItems, getPublishedTimestamp]);
+  }, [sortedItems, getPublishedTimestamp, uiLocale]);
 
   return (
     <main className="pnf-stage flex h-full flex-col overflow-hidden p-4 md:p-8">
-      <div className="mx-auto flex h-full w-full max-w-6xl flex-col gap-6">
+      <div className="mx-auto flex h-full w-full max-w-7xl flex-col gap-6">
         {isLoading ? (
           <div className="flex h-full items-center justify-center">
             <Spinner size="large" />
@@ -164,7 +168,7 @@ export const NewsFeedTemplate = (props: NewsFeedLayoutProps) => {
               </NotificationBarAlert>
             ) : null}
 
-            <section className="grid min-h-0 flex-1 grid-cols-1 gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
+            <section className="grid min-h-0 flex-1 grid-cols-1 gap-4 lg:grid-cols-[390px_minmax(0,1fr)]">
               {/* Sidebar — table of contents + refresh */}
               <Paper
                 bordered
@@ -189,28 +193,30 @@ export const NewsFeedTemplate = (props: NewsFeedLayoutProps) => {
                 <div className="mt-3 min-h-0 flex-1 space-y-2 overflow-y-auto pr-1">
                   {tocGroups.length > 0 ? (
                     tocGroups.map((group) => (
-                      <div key={group.label} className="space-y-2">
+                      <div key={group.label} className="space-y-3">
                         <h3 className="border-b border-[var(--pnf-border)] pb-1 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-text-low-emphasis)]">
                           {group.label}
                         </h3>
 
-                        {group.entries.map(({ item, index }) => (
-                          <MenuItem
-                            key={`toc-${item.heading}-${index}`}
-                            primaryLabel={item.heading || 'Untitled update'}
-                            secondaryLabel={
-                              item.publishedAtUtc
-                                ? new Date(
-                                    item.publishedAtUtc,
-                                  ).toLocaleDateString(undefined, {
-                                    dateStyle: 'medium',
-                                  })
-                                : undefined
-                            }
-                            selected={activeTocIndex === index}
-                            onClick={() => handleTocItemClick(index)}
-                          />
-                        ))}
+                        <div className="pnf-toc-entries">
+                          {group.entries.map(({ item, index }) => (
+                            <MenuItem
+                              key={`toc-${item.heading}-${index}`}
+                              primaryLabel={item.heading || 'Untitled update'}
+                              secondaryLabel={
+                                item.publishedAtUtc
+                                  ? new Date(
+                                      item.publishedAtUtc,
+                                    ).toLocaleDateString(uiLocale, {
+                                      dateStyle: 'medium',
+                                    })
+                                  : undefined
+                              }
+                              selected={activeTocIndex === index}
+                              onClick={() => handleTocItemClick(index)}
+                            />
+                          ))}
+                        </div>
                       </div>
                     ))
                   ) : (
@@ -236,7 +242,7 @@ export const NewsFeedTemplate = (props: NewsFeedLayoutProps) => {
                     Last updated:{' '}
                     {layoutProps.lastRetrievedUtc
                       ? new Date(layoutProps.lastRetrievedUtc).toLocaleString(
-                          undefined,
+                          uiLocale,
                           {
                             dateStyle: 'medium',
                             timeStyle: 'short',
