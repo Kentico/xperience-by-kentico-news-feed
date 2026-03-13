@@ -13,6 +13,21 @@
   <ContentItemCommonDataFirstPublishedWhen>2026-03-13 21:02:46Z</ContentItemCommonDataFirstPublishedWhen>
   <ContentItemCommonDataGUID>7b70b57c-add8-477b-9daf-98807d65cb8d</ContentItemCommonDataGUID>
   <ContentItemCommonDataIsLatest>True</ContentItemCommonDataIsLatest>
-  <ContentItemCommonDataLastPublishedWhen>2026-03-13 21:02:46Z</ContentItemCommonDataLastPublishedWhen>
+  <ContentItemCommonDataLastPublishedWhen>2026-03-13 22:47:32Z</ContentItemCommonDataLastPublishedWhen>
   <ContentItemCommonDataVersionStatus>2</ContentItemCommonDataVersionStatus>
+  <ContentItemReferences>
+    <cms.contentitemreference>
+      <ContentItemReferenceGroupGUID>0ed40e7e-b87b-491e-95c0-16089ccf35f1</ContentItemReferenceGroupGUID>
+      <ContentItemReferenceGUID>4abb8c12-778a-4c34-a7e9-2955559da011</ContentItemReferenceGUID>
+      <ContentItemReferenceSourceCommonDataID>
+        <GUID>7b70b57c-add8-477b-9daf-98807d65cb8d</GUID>
+        <ObjectType>cms.contentitemcommondata</ObjectType>
+      </ContentItemReferenceSourceCommonDataID>
+      <ContentItemReferenceTargetItemID>
+        <CodeName>PorlexTallCeramicBurrGrinder-m20mpf8e</CodeName>
+        <GUID>024ecfde-2d85-4537-98ae-f8571e67b845</GUID>
+        <ObjectType>cms.contentitem</ObjectType>
+      </ContentItemReferenceTargetItemID>
+    </cms.contentitemreference>
+  </ContentItemReferences>
 </cms.contentitemcommondata>
