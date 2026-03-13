@@ -1,77 +1,60 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap');
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-@layer base {
-  :root {
-    /* Kentico brand: New Gray 10 background, New Gray 80 text */
-    --background: 20 13% 97%;
-    --foreground: 17 12% 23%;
-    --card: 0 0% 100%;
-    --card-foreground: 17 12% 23%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 17 12% 23%;
-    /* Kentico Orange #f05a22 */
-    --primary: 16 87% 54%;
-    --primary-foreground: 0 0% 100%;
-    /* New Gray 10 */
-    --secondary: 20 13% 95%;
-    --secondary-foreground: 17 12% 23%;
-    --muted: 13 15% 92%;
-    --muted-foreground: 16 20% 50%;
-    --accent: 16 87% 54%;
-    --accent-foreground: 0 0% 100%;
-    /* Brand Alert #FF4547 */
-    --destructive: 0 100% 64%;
-    --destructive-foreground: 0 0% 100%;
-    /* New Gray 20 #E5DEDC */
-    --border: 13 15% 88%;
-    --input: 13 15% 88%;
-    --ring: 16 87% 54%;
-    --radius: 0.5rem;
+/* ============================================
+ * Project-specific tokens
+ * Reference design system palette tokens from tokens.css
+ * ============================================ */
+:root {
+  /* Kentico Orange accent — used for news feed brand colour */
+  --pnf-accent: var(--palette-kentico-orange-50); /* #f05a22 */
+  --pnf-accent-strong: var(--palette-kentico-orange-60); /* #c64300 */
 
-    /* Kentico Orange accent */
-    --pnf-accent: 16 87% 54%;
-    /* Darker orange for hover states */
-    --pnf-accent-strong: 16 87% 42%;
-    /* New Gray 20 #E5DEDC */
-    --pnf-border: 13 15% 88%;
-    /* Kentico Violet 10 #F7F1FF — subtle brand chip tint */
-    --pnf-chip: 266 100% 97%;
-    --pnf-surface: 20 13% 99%;
-    /* New Gray 10 #F5F3F2 */
-    --pnf-surface-subtle: 20 13% 96%;
-    /* Shadow based on New Gray 80 */
-    --pnf-shadow: 17 12% 23% / 0.12;
-    --pnf-shadow-soft: 17 12% 50% / 0.12;
+  /* Borders and surfaces */
+  --pnf-border: var(--palette-warm-grey-20); /* #e5dedc */
+  --pnf-chip: var(--palette-xperience-violet-10); /* #f7f1ff */
+  --pnf-surface: var(--color-paper-background); /* #fff */
+  --pnf-surface-subtle: var(--palette-warm-grey-10); /* #f5f3f2 */
 
-    --pnf-heading-font: 'Fraunces', Georgia, serif;
-    --pnf-body-font: 'Manrope', 'Segoe UI', sans-serif;
-  }
+  /* Shadows — warm-toned to match brand palette */
+  --pnf-shadow: rgba(65, 55, 51, 0.12);
+  --pnf-shadow-soft: rgba(156, 136, 127, 0.12);
+
+  /* Heading font — matches native XbK admin UI */
+  --pnf-heading-font: var(--typeface-product-primary); /* GT Walsheim */
 }
 
 @layer base {
-  * {
-    border-color: hsl(var(--border));
-  }
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: var(--pnf-body-font);
+    font-family: var(--typeface-product-secondary);
+    color: var(--color-text-default-on-light);
   }
 
-  .pnf-stage {
-    background:
-      radial-gradient(circle at 10% 10%, hsl(var(--pnf-chip)) 0%, transparent 40%),
-      radial-gradient(circle at 90% 15%, hsl(16 87% 96%) 0%, transparent 38%),
-      linear-gradient(170deg, hsl(var(--background)) 0%, hsl(20 15% 96%) 100%);
-  }
-
+  /* Entrance animation for feed items */
   .pnf-stagger-item {
     animation: pnfRise 360ms ease both;
   }
 
+  @keyframes pnfRise {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ============================================
+   * Rich-text content area
+   * ============================================ */
   .pnf-richtext {
     overflow-wrap: anywhere;
+    font-size: var(--font-size-m);
+    line-height: var(--line-xl);
+    color: var(--color-text-low-emphasis);
   }
 
   .pnf-richtext :where(p, ul, ol, blockquote) {
@@ -85,7 +68,7 @@
   }
 
   .pnf-richtext a {
-    color: hsl(var(--pnf-accent-strong));
+    color: var(--pnf-accent-strong);
     text-decoration: underline;
     text-underline-offset: 3px;
   }
@@ -95,20 +78,8 @@
     max-height: 18rem;
     object-fit: contain;
     margin-top: 0.75rem;
-    border-radius: 0.625rem;
-    border: 1px solid hsl(var(--pnf-border));
-    background: hsl(var(--pnf-surface-subtle));
-  }
-
-  @keyframes pnfRise {
-    from {
-      opacity: 0;
-      transform: translateY(8px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    border-radius: var(--radius-m);
+    border: 1px solid var(--pnf-border);
+    background: var(--pnf-surface-subtle);
   }
 }

@@ -148,6 +148,10 @@ export default [
           format: ['camelCase'],
         },
         {
+          selector: 'typeMethod',
+          format: ['camelCase'],
+        },
+        {
           selector: 'typeProperty',
           format: ['camelCase'],
 

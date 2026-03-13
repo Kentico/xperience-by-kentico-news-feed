@@ -1,0 +1,79 @@
+@layer components {
+  .MenuItem {
+    width: 100%;
+    border: none;
+    border-radius: var(--radius-m);
+    padding: var(--spacing-s) var(--spacing-m);
+    text-align: left;
+    background-color: transparent;
+    color: var(--color-text-default-on-light);
+    cursor: pointer;
+    transition:
+      background-color var(--transition-duration-default)
+        var(--transition-timing-default),
+      color var(--transition-duration-default) var(--transition-timing-default);
+  }
+
+  .MenuItem:hover:not(:disabled) {
+    background-color: var(--color-hover);
+  }
+
+  .MenuItem:active:not(:disabled) {
+    background-color: var(--color-background-selected-hover);
+  }
+
+  .MenuItem:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-default);
+  }
+
+  .MenuItem-selected {
+    background-color: var(--color-background-selected);
+    color: var(--color-product-selected);
+  }
+
+  .MenuItem-selected:hover:not(:disabled) {
+    background-color: var(--color-background-selected-hover);
+  }
+
+  .MenuItem-disabled {
+    color: var(--color-text-disabled);
+    cursor: default;
+  }
+
+  .MenuItem-body {
+    display: block;
+    min-width: 0;
+  }
+
+  .MenuItem .MenuItem-primaryLabel {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: var(--typeface-product-primary);
+    font-size: calc(var(--font-size-s) + 1px);
+    line-height: var(--line-m);
+    font-weight: var(--weight-bold);
+  }
+
+  .MenuItem-bottomSpacing {
+    margin-bottom: 2px;
+  }
+
+  .MenuItem-secondaryLabel {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: var(--typeface-product-primary);
+    font-size: var(--font-size-s);
+    line-height: calc(var(--font-size-s) * 1.2);
+    font-weight: var(--weight-regular);
+    color: var(--color-text-low-emphasis);
+  }
+
+  .MenuItem-selected .MenuItem-secondaryLabel {
+    color: var(--color-product-selected);
+  }
+}

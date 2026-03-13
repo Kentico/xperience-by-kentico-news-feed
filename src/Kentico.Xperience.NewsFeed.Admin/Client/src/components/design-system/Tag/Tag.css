@@ -1,0 +1,24 @@
+@layer components {
+  .Tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius-m);
+    padding: var(--spacing-s) var(--spacing-l);
+    font-family: var(--typeface-product-primary);
+    font-size: var(--font-size-s);
+    line-height: var(--line-s);
+    font-weight: var(--weight-regular);
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  .Tag-light {
+    background: var(--color-background-selected);
+    color: var(--color-text-default-on-light);
+  }
+
+  .Tag-dark {
+    background: var(--color-product-selected);
+    color: var(--color-text-default-on-dark);
+  }
+}

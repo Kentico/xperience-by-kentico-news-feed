@@ -1,9 +1,16 @@
 {
-	"servers": {
-		"kentico-docs-mcp": {
-			"type": "http",
-			"url": "https://docs.kentico.com/mcp"
-		}
-	},
-	"inputs": []
+  "servers": {
+    "kentico-docs-mcp": {
+      "type": "http",
+      "url": "https://docs.kentico.com/mcp"
+    },
+    "xbyk-components": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/submodules/xperience-by-kentico-admin-design-components/scripts/mcp-server.js"
+      ]
+    }
+  },
+  "inputs": []
 }

@@ -1,0 +1,515 @@
+/**
+ * Design System Tokens
+ * Extracted from Kentico Xperience Admin Components
+ * Copied from: submodules/xperience-by-kentico-admin-design-components/src/styles/tokens.css
+ */
+
+:root {
+  /* ============================================
+   * PRIMITIVE COLORS (Palette)
+   * ============================================ */
+
+  --palette-kentico-orange-original: #f05a22;
+  --palette-white: #fff;
+  --palette-xperience-original: #7f09b7;
+
+  /* Grey Scale */
+  --palette-grey-10: #f5f5f5;
+  --palette-grey-20: #dfdfdf;
+  --palette-grey-30: #c6c6c6;
+  --palette-grey-40: #a8a8a8;
+  --palette-grey-50: #8c8c8c;
+  --palette-grey-60: #6f6f6f;
+  --palette-grey-70: #525252;
+  --palette-grey-80: #393939;
+  --palette-grey-90: #262626;
+  --palette-grey-100: #151515;
+
+  /* Warm Grey Scale */
+  --palette-warm-grey-10: #f5f3f2;
+  --palette-warm-grey-20: #e5dedc;
+  --palette-warm-grey-30: #d1c4bf;
+  --palette-warm-grey-40: #b6a59f;
+  --palette-warm-grey-50: #9c887f;
+  --palette-warm-grey-60: #7d6c65;
+  --palette-warm-grey-70: #5d504b;
+  --palette-warm-grey-80: #413733;
+  --palette-warm-grey-90: #2b2422;
+  --palette-warm-grey-100: #191413;
+
+  /* Neon Green */
+  --palette-neon-green-10: #e9f9dc;
+  --palette-neon-green-20: #c8eba8;
+  --palette-neon-green-30: #96da00;
+  --palette-neon-green-40: #7eb900;
+  --palette-neon-green-50: #689a00;
+  --palette-neon-green-60: #537b00;
+  --palette-neon-green-70: #3c5b00;
+  --palette-neon-green-80: #294000;
+  --palette-neon-green-90: #1a2a00;
+  --palette-neon-green-100: #0d1900;
+
+  /* Kontent Turquoise */
+  --palette-kontent-turquoise-10: #e3f8f4;
+  --palette-kontent-turquoise-20: #b4ebe2;
+  --palette-kontent-turquoise-30: #2cd5c4;
+  --palette-kontent-turquoise-40: #00bdac;
+  --palette-kontent-turquoise-50: #009d8e;
+  --palette-kontent-turquoise-60: #007d72;
+  --palette-kontent-turquoise-70: #005d54;
+  --palette-kontent-turquoise-80: #00413a;
+  --palette-kontent-turquoise-90: #002c27;
+  --palette-kontent-turquoise-100: #001916;
+
+  /* Sky Blue */
+  --palette-sky-blue-10: #ebf5ff;
+  --palette-sky-blue-20: #c6e3ff;
+  --palette-sky-blue-30: #8fcdff;
+  --palette-sky-blue-40: #00b3fc;
+  --palette-sky-blue-50: #0094d2;
+  --palette-sky-blue-60: #0677a8;
+  --palette-sky-blue-70: #00587e;
+  --palette-sky-blue-80: #003d5a;
+  --palette-sky-blue-90: #00293e;
+  --palette-sky-blue-100: #001826;
+
+  /* Ultramarine Blue */
+  --palette-ultramarine-blue-10: #f1f3ff;
+  --palette-ultramarine-blue-20: #d7deff;
+  --palette-ultramarine-blue-30: #b5c4ff;
+  --palette-ultramarine-blue-40: #87a5ff;
+  --palette-ultramarine-blue-50: #5984ff;
+  --palette-ultramarine-blue-60: #3d5dff;
+  --palette-ultramarine-blue-70: #003ddc;
+  --palette-ultramarine-blue-80: #00299f;
+  --palette-ultramarine-blue-90: #001a70;
+  --palette-ultramarine-blue-100: #000d48;
+
+  /* Majorelle Blue */
+  --palette-majorelle-blue-10: #f4f2ff;
+  --palette-majorelle-blue-20: #e0dcff;
+  --palette-majorelle-blue-30: #c8bfff;
+  --palette-majorelle-blue-40: #ac9bff;
+  --palette-majorelle-blue-50: #9176ff;
+  --palette-majorelle-blue-60: #774aff;
+  --palette-majorelle-blue-70: #5c00ef;
+  --palette-majorelle-blue-80: #4000ad;
+  --palette-majorelle-blue-90: #2b007a;
+  --palette-majorelle-blue-100: #19004f;
+
+  /* Xperience Violet */
+  --palette-xperience-violet-10: #f7f1ff;
+  --palette-xperience-violet-20: #ebd8ff;
+  --palette-xperience-violet-30: #dbb8ff;
+  --palette-xperience-violet-40: #cb8eff;
+  --palette-xperience-violet-50: #bd5eff;
+  --palette-xperience-violet-60: #af00fa;
+  --palette-xperience-violet-70: #7f09b7;
+  --palette-xperience-violet-80: #5d0088;
+  --palette-xperience-violet-90: #40005f;
+  --palette-xperience-violet-100: #27003d;
+
+  /* Rose */
+  --palette-rose-10: #fff0f4;
+  --palette-rose-20: #ffd5e0;
+  --palette-rose-30: #ffb0c8;
+  --palette-rose-40: #ff7fac;
+  --palette-rose-50: #ff3691;
+  --palette-rose-60: #d90074;
+  --palette-rose-70: #a30056;
+  --palette-rose-80: #75003c;
+  --palette-rose-90: #510028;
+  --palette-rose-100: #330017;
+
+  /* Red */
+  --palette-red-10: #fff0f0;
+  --palette-red-20: #ffd6d6;
+  --palette-red-30: #ffb3b3;
+  --palette-red-40: #ff8484;
+  --palette-red-50: #ff4547;
+  --palette-red-60: #e10007;
+  --palette-red-70: #a90004;
+  --palette-red-80: #790002;
+  --palette-red-90: #540001;
+  --palette-red-100: #360000;
+
+  /* Kentico Orange Scale */
+  --palette-kentico-orange-10: #fff1e9;
+  --palette-kentico-orange-20: #ffd7ca;
+  --palette-kentico-orange-30: #ffb59b;
+  --palette-kentico-orange-40: #ff8852;
+  --palette-kentico-orange-50: #f05a22;
+  --palette-kentico-orange-60: #c64300;
+  --palette-kentico-orange-70: #953000;
+  --palette-kentico-orange-80: #6a2000;
+  --palette-kentico-orange-90: #491300;
+  --palette-kentico-orange-100: #2e0900;
+
+  /* Yellow */
+  --palette-yellow-10: #fff1e4;
+  --palette-yellow-20: #ffd9ae;
+  --palette-yellow-30: #ffba31;
+  --palette-yellow-40: #db9d00;
+  --palette-yellow-50: #b78200;
+  --palette-yellow-60: #9e6200;
+  --palette-yellow-70: #764800;
+  --palette-yellow-80: #543100;
+  --palette-yellow-90: #392000;
+  --palette-yellow-100: #231200;
+
+  /* ============================================
+   * SEMANTIC COLORS (Decisions)
+   * ============================================ */
+
+  /* Alert Colors */
+  --color-alert-active: #a90004;
+  --color-alert-background-high-emphasis: #e10007;
+  --color-alert-background-low-emphasis: linear-gradient(124.56deg, #fff0f0 28.01%, #ffd6d6 202.32%);
+  --color-alert-background-selected: #ffd6d6;
+  --color-alert-background-selected-hover: #ffb3b3;
+  --color-alert-focus: #e10007;
+  --color-alert-hover: #a90004;
+  --color-alert-icon: #e10007;
+  --color-alert-text: #e10007;
+
+  /* Background Colors */
+  --color-background-disabled: #dfdfdf;
+  --color-background-highlighted: #f4f2ff;
+  --color-background-selected-hover: #c8bfff;
+  --color-background-selected: #e0dcff;
+  --color-background-side-menu: #f5f3f2;
+  --color-background-subtle: #f5f5f5;
+  --color-background-subtle-hover: #dfdfdf;
+  --color-background-error-on-light: rgba(225, 0, 7, 0.08);
+
+  /* Border Colors */
+  --color-border-active: #151515;
+  --color-border-alert: #e10007;
+  --color-border-default: #8c8c8c;
+  --color-border-disabled: #c6c6c6;
+  --color-border-hover: #151515;
+  --color-border-low-emphasis: var(--palette-grey-20);
+  --color-border-warning: #9e6200;
+
+  /* Divider Colors */
+  --color-divider-default: #dfdfdf;
+
+  /* Focus Colors */
+  --color-focus-light: #fff;
+  --color-focus: #3d5dff;
+
+  /* Hover Colors */
+  --color-hover: rgba(156, 136, 127, 0.3);
+
+  /* Icon Colors */
+  --color-icon-default-on-dark: #fff;
+  --color-icon-default: #151515;
+  --color-icon-disabled: #8c8c8c;
+  --color-icon-highlighted: #5d0088;
+  --color-icon-large-default: #393939;
+  --color-icon-low-emphasis: #525252;
+
+  /* Info Colors */
+  --color-info-background-high-emphasis: #3d5dff;
+  --color-info-icon: #3d5dff;
+  --color-info-text: #3d5dff;
+
+  /* Input Colors */
+  --color-input-background: transparent;
+  --color-input-border: #8c8c8c;
+
+  /* Link Colors */
+  --color-link-hover: #5d0088;
+  --color-link-visited: #5d0088;
+  --color-link: #7f09b7;
+
+  /* Overlay Colors */
+  --color-overlay-background: rgba(57, 57, 57, 0.4);
+
+  /* Paper Colors */
+  --color-paper-background: #fff;
+  --color-paper-border: #dfdfdf;
+
+  /* Product Colors */
+  --color-product-hover: #5d0088;
+  --color-product-selected-hover: #40005f;
+  --color-product-selected: #5d0088;
+  --color-product: #7f09b7;
+
+  /* Success Colors */
+  --color-success-background-high-emphasis: #007d72;
+  --color-success-icon: #007d72;
+  --color-success-text: #007d72;
+
+  /* Text Colors */
+  --color-text-default-on-dark: #fff;
+  --color-text-default-on-light: #151515;
+  --color-text-disabled: #8c8c8c;
+  --color-text-high-emphasis: #5d0088;
+  --color-text-hint: #6f6f6f;
+  --color-text-low-emphasis: #525252;
+
+  /* Tooltip Colors */
+  --color-tooltip-background: #151515;
+  --color-tooltip-text: #fff;
+  --color-tooltip-icon: #8c8c8c;
+
+  /* Warning Colors */
+  --color-warning-background-high-emphasis: #db9d00;
+  --color-warning-icon: #9e6200;
+  --color-warning-text: #9e6200;
+
+  /* ============================================
+   * GRADIENTS
+   * ============================================ */
+
+  --gradient-background-desk:
+    linear-gradient(0deg, rgba(198, 67, 0, 0.02), rgba(198, 67, 0, 0.02)),
+    linear-gradient(107.51deg, #fff -22.1%, #f5f3f2 37.88%, #e5dedc 229.14%);
+
+  --gradient-product: linear-gradient(303.62deg, #c64300 -109.97%, #7f09b7 87.4%);
+  --gradient-product-hover: linear-gradient(303.62deg, #953000 -109.97%, #5d0088 87.4%);
+
+  /* ============================================
+   * DIMENSIONS & SPACING
+   * ============================================ */
+
+  --grid-unit: 8px;
+
+  --spacing-micro: 1px;
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 12px;
+  --spacing-l: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+  --spacing-xxxl: 40px;
+  --spacing-xxxxl: 48px;
+  --spacing-card: 24px;
+
+  /* Uppercase aliases */
+  --spacing-S: var(--spacing-s);
+  --spacing-M: var(--spacing-m);
+  --spacing-L: var(--spacing-l);
+  --spacing-XL: var(--spacing-xl);
+  --spacing-XXL: var(--spacing-xxl);
+
+  /* ============================================
+   * ICON & COMPONENT SIZES
+   * ============================================ */
+
+  --icon-xxs: 8px;
+  --icon-xs: 12px;
+  --icon-s: 16px;
+  --icon-m: 20px;
+  --icon-l: 24px;
+  --icon-xl: 32px;
+  --icon-xxl: 40px;
+  --icon-size-s: var(--icon-s);
+
+  --size-xs: 24px;
+  --size-s: 32px;
+  --size-m: 40px;
+  --size-l: 48px;
+  --size-guard: 96px;
+
+  /* ============================================
+   * BORDER & RADIUS
+   * ============================================ */
+
+  --border-width-default: 1px;
+  --border-width-warning: 2px;
+  --border-width-error: 2px;
+  --border-width-input: 1px;
+  --border-style-default: solid;
+  --width-focus: 2px;
+
+  --radius-l: 16px;
+  --radius-m: 8px;
+  --radius-s: 4px;
+  --radius-pill: 5000px;
+  --radius-default: var(--radius-m);
+
+  --focus-ring-width: 3px;
+  --focus-ring-inner: 0 0 0 1px #fff;
+  --focus-ring-outer-default: 0 0 0 3px #3d5dff;
+  --focus-ring-outer-alert: 0 0 0 3px #e10007;
+  --focus-default: 0 0 0 1px #fff, 0 0 0 3px #3d5dff;
+  --focus-alert: 0 0 0 1px #fff, 0 0 0 3px #e10007;
+
+  /* ============================================
+   * SHADOWS
+   * ============================================ */
+
+  --shadow-xs: 0 0 8px rgba(38, 38, 38, 0.03);
+  --shadow-s:
+    0 8px 14px rgba(38, 38, 38, 0.08),
+    0 0 8px rgba(38, 38, 38, 0.03);
+  --shadow-m:
+    0 8px 16px rgba(38, 38, 38, 0.16),
+    0 0 8px rgba(38, 38, 38, 0.03);
+  --shadow-l:
+    0 8px 32px rgba(38, 38, 38, 0.24),
+    0 0 8px rgba(38, 38, 38, 0.03);
+
+  --glow-primary:
+    0 1px 8px rgba(203, 142, 255, 0.4),
+    0 5px 11px rgba(189, 94, 255, 0.1);
+
+  --shadow-small: var(--shadow-s);
+  --shadow-large: var(--shadow-l);
+
+  /* ============================================
+   * Z-INDEX
+   * ============================================ */
+
+  --z-index-hidden: -1;
+  --z-index-visible: 0;
+  --z-index-elevated: 1;
+  --z-index-rte: 10;
+  --z-index-sticky-header: 100;
+  --z-index-drop-down: 200;
+  --z-index-statusbar: 1000;
+  --z-index-dialog: 2000;
+  --z-index-sidepanel: 3000;
+  --z-index-tooltip: 5000;
+  --z-index-snackbar: 6000;
+  --z-index-modal: var(--z-index-dialog);
+  --z-index-sticky: var(--z-index-sticky-header);
+
+  /* ============================================
+   * TYPOGRAPHY
+   * ============================================ */
+
+  --typeface-product-primary: 'GT Walsheim', sans-serif;
+  --typeface-product-secondary: 'Inter', sans-serif;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --font-size-xxs: 9px;
+  --font-size-xs: 11px;
+  --font-size-s: 12px;
+  --font-size-m: 14px;
+  --font-size-l: 16px;
+  --font-size-xl: 24px;
+  --font-size-xxxxl: 48px;
+
+  --line-xxs: 10px;
+  --line-xs: 12px;
+  --line-s: 14px;
+  --line-m: 16px;
+  --line-l: 20px;
+  --line-xl: 24px;
+  --line-xxl: 32px;
+  --line-xxxxxl: 56px;
+  --line-height-coefficient: 1.1;
+
+  --letter-spacing-l: 0.1ch;
+  --letter-spacing-m: 0.08ch;
+
+  /* Font aliases */
+  --font-family-heading: var(--typeface-product-primary);
+  --font-family-inter: var(--typeface-product-secondary);
+  --font-family-default: var(--typeface-product-secondary);
+  --font-family: var(--typeface-product-secondary);
+  --font-family-base: var(--typeface-product-secondary);
+
+  --font-weight-regular: var(--weight-regular);
+  --font-weight-medium: var(--weight-medium);
+  --font-weight-semibold: var(--weight-semibold);
+  --font-weight-bold: var(--weight-bold);
+  --font-weight-semi-bold: var(--weight-semibold);
+
+  --font-size-body-m: var(--font-size-m);
+  --font-size-body-s: var(--font-size-s);
+  --font-size-headline-s: var(--font-size-l);
+  --font-size-label-l: var(--font-size-m);
+  --font-size-label-m: var(--font-size-s);
+
+  --line-height-xs: var(--line-xs);
+  --line-height-s: var(--line-s);
+  --line-height-l: var(--line-l);
+  --line-height-m: var(--line-m);
+  --line-height-M: var(--line-m);
+
+  --letter-spacing-headline: var(--letter-spacing-m);
+
+  /* ============================================
+   * ANIMATIONS
+   * ============================================ */
+
+  --transition-duration-fast: 150ms;
+  --transition-duration-default: 250ms;
+  --transition-duration-normal: 200ms;
+  --transition-duration-slow: 300ms;
+  --transition-duration-expand: 500ms;
+  --transition-timing-default: cubic-bezier(0.23, 1, 0.32, 1);
+  --transition-250: 250ms cubic-bezier(0.23, 1, 0.32, 1);
+  --duration-fast: var(--transition-duration-fast);
+  --easing-standard: var(--transition-timing-default);
+  --transition-timing-function: var(--transition-timing-default);
+
+  /* ============================================
+   * SHORTHAND ALIASES
+   * ============================================ */
+
+  --grey-10: var(--palette-grey-10);
+  --grey-20: var(--palette-grey-20);
+  --grey-30: var(--palette-grey-30);
+  --grey-40: var(--palette-grey-40);
+  --grey-50: var(--palette-grey-50);
+  --grey-60: var(--palette-grey-60);
+  --grey-70: var(--palette-grey-70);
+  --grey-80: var(--palette-grey-80);
+  --grey-90: var(--palette-grey-90);
+  --grey-100: var(--palette-grey-100);
+
+  --warm-grey-10: var(--palette-warm-grey-10);
+  --warm-grey-20: var(--palette-warm-grey-20);
+  --warm-grey-30: var(--palette-warm-grey-30);
+
+  --color-background-primary: var(--color-paper-background);
+  --color-background-secondary: var(--color-background-subtle);
+  --color-background-hover: var(--color-background-subtle-hover);
+  --color-background-alert: var(--color-alert-background-high-emphasis);
+  --color-background-error: var(--palette-red-10);
+  --color-error-background: var(--palette-red-10);
+  --color-info-background: var(--palette-ultramarine-blue-10);
+  --color-success-background: var(--palette-kontent-turquoise-10);
+
+  --color-error: var(--palette-red-60);
+  --color-success: var(--color-success-text);
+  --color-primary: var(--color-product);
+
+  --color-text-default: var(--color-text-default-on-light);
+  --color-text-default-secondary: var(--color-text-low-emphasis);
+  --color-text-primary: var(--color-text-high-emphasis);
+  --color-text-secondary: var(--color-text-low-emphasis);
+  --color-text-error: var(--color-alert-text);
+  --color-text-alert: var(--color-alert-text);
+  --color-text-placeholder: var(--color-text-hint);
+
+  --color-border-focus: var(--color-focus);
+  --color-focus-ring: var(--color-focus);
+
+  --color-icon-primary: var(--color-product);
+  --color-icon-warning: var(--color-warning-icon);
+
+  --border-radius-xs: var(--radius-s);
+  --border-radius-s: var(--radius-s);
+  --border-radius-small: var(--radius-s);
+  --border-radius-m: var(--radius-m);
+  --border-radius-medium: var(--radius-m);
+
+  /* Skeleton */
+  --color-skeleton-background: #f5f5f5;
+  --color-skeleton-content: linear-gradient(135deg, #c6c6c6, #dfdfdf);
+
+  /* Notification Bar / menu */
+  --menu-dropdown-min-width: 160px;
+  --menu-dropdown-max-height: 320px;
+}

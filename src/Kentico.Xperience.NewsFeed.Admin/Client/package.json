@@ -14,6 +14,7 @@
   "dependencies": {
     "@kentico/xperience-admin-base": "31.2.1",
     "@kentico/xperience-admin-components": "31.2.1",
+    "classnames": "^2.5.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
