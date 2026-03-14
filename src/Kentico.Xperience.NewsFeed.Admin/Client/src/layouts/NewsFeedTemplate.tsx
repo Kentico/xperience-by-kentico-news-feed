@@ -17,8 +17,8 @@ import {
   Paper,
   PaperElevation,
 } from '../components/design-system/Paper/Paper';
-import { Spinner } from '../components/design-system/Spinner/Spinner';
 import { NewsFeedCard, type NewsFeedItem } from '../components/NewsFeedCard';
+import { NewsFeedLoadingSkeleton } from '../components/NewsFeedLoadingSkeleton';
 
 interface NewsFeedLayoutProps {
   feedTitle: string;
@@ -153,13 +153,26 @@ export const NewsFeedTemplate = (props: NewsFeedLayoutProps) => {
     return groups;
   }, [sortedItems, getPublishedTimestamp, uiLocale]);
 
+  React.useEffect(() => {
+    if (isLoading || typeof window === 'undefined') {
+      return;
+    }
+
+    // Nudge host/container layout observers after async content changes.
+    const frameId = window.requestAnimationFrame(() => {
+      window.dispatchEvent(new Event('resize'));
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+    };
+  }, [isLoading, sortedItems.length]);
+
   return (
     <main className="pnf-stage flex h-full flex-col overflow-hidden p-4 md:p-8">
       <div className="mx-auto flex h-full w-full max-w-7xl flex-col gap-6">
         {isLoading ? (
-          <div className="flex h-full items-center justify-center">
-            <Spinner size="large" />
-          </div>
+          <NewsFeedLoadingSkeleton />
         ) : (
           <>
             {layoutProps.hasError ? (
